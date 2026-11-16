@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="About IS Studio — a human-first, AI-native design and technology company." />
+    <meta name="description" content="About Novifaro new light for what comes next. Brand strategy, digital products, websites, and purposeful AI." />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="light" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<title>IS - Experience House</title>
+<title>About Novifaro</title>
 
   <!-- Favicon with magnet emoji -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧲</text></svg>" />
@@ -269,7 +269,7 @@
     }
 
 
-    /* What we do — sticky horizontal scrub */
+    /* What we do sticky horizontal scrub */
     .ut-services {
       margin: clamp(2rem, 4vh, 3.5rem) auto 0;
       pointer-events: auto;
@@ -312,7 +312,6 @@
       font-size: clamp(.95rem, 1.2vw, 1.1rem);
       line-height: 1.65;
       color: #FFFFFF;
-      max-width: 42ch;
     }
     .ut-services__scroll {
       position: relative;
@@ -340,6 +339,9 @@
       gap: clamp(1rem, 2.5vh, 1.5rem);
       box-sizing: border-box;
     }
+    .ut-service__media { order: 1; }
+    .ut-service__head { order: 2; }
+    .ut-service__body { order: 3; }
     .ut-service__head {
       display: flex;
       align-items: baseline;
@@ -476,28 +478,33 @@
         grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.7fr);
         grid-template-rows: auto minmax(0, 1fr);
         column-gap: clamp(1.5rem, 3vw, 3rem);
-        row-gap: 1rem;
+        row-gap: .85rem;
         align-items: start;
-      }
-      .ut-service__head {
-        grid-column: 1 / -1;
-      }
-      .ut-service__name {
-        font-size: clamp(2.4rem, 4.8vw, 4.5rem);
       }
       .ut-service__media {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 1 / -1;
+        order: unset;
         height: 100%;
         min-height: 280px;
         max-height: 52vh;
         aspect-ratio: auto;
         align-self: stretch;
       }
+      .ut-service__head {
+        grid-column: 2;
+        grid-row: 1;
+        order: unset;
+        align-self: start;
+      }
+      .ut-service__name {
+        font-size: clamp(2.4rem, 4.8vw, 4.5rem);
+      }
       .ut-service__body {
         grid-column: 2;
         grid-row: 2;
-        align-content: end;
+        order: unset;
+        align-content: start;
         max-width: none;
         padding-bottom: .35rem;
       }
@@ -673,7 +680,7 @@
     }
     @keyframes dotPulse {
       0%,100% { transform: scale(1); box-shadow: 0 0 0 0 var(--dot-glow); }
-      50%     { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(206,65,39,0); }
+      50% { transform: scale(1.15); box-shadow: 0 0 0 6px rgba(206,65,39,0); }
     }
 
     .email a {
@@ -750,7 +757,7 @@
       pointer-events: auto;
       cursor: none !important;
     }
-    .logo-svg { width: 36px; height: auto; display: block; }
+    .logo-svg { width: 88px; height: auto; display: block; color: var(--fg); }
 
     .pills { display: flex; gap: clamp(10px, 1.2vw, 16px); flex-wrap: wrap; }
     .pill {
@@ -778,11 +785,12 @@
       border-color: #FFFFFF;
     }
     .pill.is-active .dot { background: #CE4127; }
-    body.about-page .logo-svg path { fill: #FFFFFF; }
+    body.about-page .logo-svg { color: #FFFFFF; }
+    body.about-page .logo-svg path { fill: currentColor; }
 
     .wedge { display: none; }
 
-    /* —— Utopia Tokyo–style hero —— */
+    /* Utopia Tokyo–style hero */
     .cc-hero {
       pointer-events: auto;
       margin: 0 auto;
@@ -830,13 +838,22 @@
       gap: .75rem;
     }
 
-    .hero__title .eyebrow {
+    .hero__title .eyebrow,
+    .hero__logo .eyebrow {
       padding: 0;
-      margin: 0;
+      margin: 0 0 .35rem;
       font-size: .68rem;
       letter-spacing: .16em;
       color: #FFFFFF;
       text-transform: uppercase;
+      text-align: left;
+      align-self: flex-start;
+      width: 100%;
+    }
+    .hero__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
     }
     .hero__logo .h-display {
       font-family: "Bebas Neue", Impact, sans-serif;
@@ -844,7 +861,7 @@
       line-height: .88;
       margin: 0;
       text-align: right;
-      text-transform: uppercase;
+      text-transform: none;
       color: #FFFFFF;
     }
     .u-text-outline {
@@ -1066,12 +1083,15 @@
       padding: 0;
       font-size: .62rem;
       color: rgba(255, 255, 255, .35);
+      text-transform: none;
+      letter-spacing: .04em;
     }
 
     @media (max-width: 991px) {
       .hero__grid { grid-template-columns: 1fr; }
       .hero__row { grid-template-columns: 1fr; }
       .hero__top { justify-content: flex-start; }
+      .hero__logo { align-items: flex-start; }
       .hero__logo .h-display { text-align: left; }
       .hero__title .p-m { max-width: none; }
       .slide { width: min(58vw, 260px); }
@@ -1082,7 +1102,7 @@
     }
 
 
-    /* —— Utopia-style cc-intro (layout + glitch from utopiatokyo.com) —— */
+    /* Utopia-style cc-intro (layout + glitch from utopiatokyo.com) */
     @keyframes glitch-scan {
       0% { transform: translateY(0); }
       100% { transform: translateY(12px); }
@@ -1269,7 +1289,7 @@
     .cc-intro__kanji-col .intro__line-vertical {
       display: none;
     }
-    /* 3D computer — CSS sticky (smoother than GSAP pin in grid overlay) */
+    /* 3D computer CSS sticky (smoother than GSAP pin in grid overlay) */
     .intro__unicorn {
       position: absolute;
       inset: 0;
@@ -1631,7 +1651,7 @@
       overflow: hidden;
     }
 
-    /* About page — red bg, white type */
+    /* About page red bg, white type */
     body.about-page .ut-frame,
     body.about-page .hero__frame,
     body.about-page .ut-stat,
@@ -1640,6 +1660,7 @@
     }
     body.about-page .ut-eyebrow,
     body.about-page .hero__title .eyebrow,
+    body.about-page .hero__logo .eyebrow,
     body.about-page .hero__decoration .eyebrow,
     body.about-page .ut-build-row__name,
     body.about-page .ut-footer__coords,
@@ -1737,7 +1758,7 @@
 <body class="about-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <main id="main-content" class="screen" aria-label="Experience Studio — Our House">
+  <main id="main-content" class="screen" aria-label="Novifaro About">
 
     <!-- Top-left: show reel -->
     <a class="showreel" href="#" id="btn-showreel" aria-label="Play show reel">
@@ -1745,7 +1766,7 @@
       <span class="label">Play show reel</span>
     </a>
 
-    <section class="center" aria-label="About Experience House">
+    <section class="center" aria-label="About Novifaro">
       <section class="cc-hero" role="banner" aria-labelledby="hero-title">
         <div class="hero__component">
 
@@ -1753,21 +1774,18 @@
             <div class="hero__grid">
               <div class="hero__top">
                 <div class="hero__logo">
-                  <h1 id="hero-title" class="h-display">E<strong>X</strong>P<strong>E</strong>RI<strong>E</strong>N<strong>C</strong>E <span class="u-text-outline">H<strong>O</strong>US<strong>E</strong></span></h1>
+                  <div class="eyebrow">new light</div>
+                  <h1 id="hero-title" class="h-display">We’re Novifaro.</h1>
                 </div>
               </div>
 
               <div class="hero__row">
                 <div class="hero__title">
-                  <div class="eyebrow">studio</div>
-                  <ul class="hero__subtitle-list" role="list">
-                    <li class="hero__subtitle-item"><div class="h3">We’re IStudio.</div></li>
-                  </ul>
-                  <p class="p-m">We’re a human-first, AI-native design and technology company.</p>
-                  <p class="p-m">For over 25 years we’ve helped organizations navigate moments when technology changes faster than culture.</p>
+                  <p class="p-m">Novifaro combines Novi (new) and Faro (lighthouse), representing New Light.</p>
+                  <p class="p-m">We believe every great idea deserves to be seen. Through creativity, technology, and innovation, we bring new light to businesses, brands, and digital experiences.</p>
                   <div class="hero__cta">
-                    <a class="hero-btn" href="work.html" id="heroCta" data-label=">_ENTER_THE_HOUSE">
-                      <span id="heroCtaLabel">&gt;_ENTER_THE_HOUSE</span>
+                    <a class="hero-btn" href="contact.html" id="heroCta" data-label=">_START_A_PROJECT">
+                      <span id="heroCtaLabel">&gt;_START_A_PROJECT</span>
                       <span class="frame" aria-hidden="true">
                         <span class="frame__corner corner-tl"></span>
                         <span class="frame__corner corner-tr"></span>
@@ -1803,7 +1821,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="hero__decoration"><div class="eyebrow">VERSION: 2.0.0-RC.1</div></div>
+                  <div class="hero__decoration"><div class="eyebrow">90 days to build momentum.</div></div>
                 </div>
               </div>
             </div>
@@ -1816,23 +1834,23 @@
         <div class="ut-services__scroll" id="servicesScroll">
         <div class="ut-services__sticky" id="servicesSticky">
         <div class="ut-services__intro">
-          <p class="ut-services__kicker">capabilities</p>
-          <h2 class="ut-services__title" id="services-title">What we do <span>—</span></h2>
-          <p class="ut-services__lead">We make things that matter to businesses, to brands, and to the people they serve.</p>
+          <p class="ut-services__kicker">Six values. One way of working.</p>
+          <h2 class="ut-services__title" id="services-title">WE DON'T JUST FOLLOW THE LIGHT. WE CREATE IT.</h2>
+          <p class="ut-services__lead">Bring new light to ideas through creativity, design, and technology. Transform challenges into meaningful digital experiences, intelligent solutions, and distinctive brands. Shape a future where creativity and technology work together to make the digital world more human, intelligent, and accessible.</p>
         </div>
 
         <div class="ut-services__pin" id="servicesPin">
           <ul class="ut-services__track" id="servicesTrack" role="list">
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">Brand strategy &amp; design</h3>
+                <h3 class="ut-service__name">Curiosity</h3>
                 <span class="ut-service__num" aria-hidden="true">01</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/support-center.jpg" alt="Brand systems and digital presence work" width="1400" height="900" loading="eager" decoding="async" fetchpriority="high" />
+                <img src="Assets/values/value-curiosity.jpg" alt="Curiosity" width="1400" height="900" loading="eager" decoding="async" fetchpriority="high" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We build living brand systems that create long-term differentiation.</p>
+                <p class="ut-service__copy">Question. Explore. Experiment.</p>
                 <a class="ut-service__btn" href="work.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1842,14 +1860,14 @@
 
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">Marketing &amp; content</h3>
+                <h3 class="ut-service__name">Purposeful innovation</h3>
                 <span class="ut-service__num" aria-hidden="true">02</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/anova-screen-grid.jpg" alt="Marketing and content experiences across devices" width="1400" height="900" loading="lazy" decoding="async" />
+                <img src="Assets/values/value-innovation.jpg" alt="Purposeful innovation" width="1400" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We build brand-to-demand engines that push the boundaries of your brand.</p>
+                <p class="ut-service__copy">Use technology to solve real problems.</p>
                 <a class="ut-service__btn" href="work.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1859,14 +1877,14 @@
 
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">Products &amp; platforms</h3>
+                <h3 class="ut-service__name">Human first</h3>
                 <span class="ut-service__num" aria-hidden="true">03</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/mobile-screens.jpg" alt="Product interface screens" width="1600" height="1067" loading="lazy" decoding="async" />
+                <img src="Assets/values/value-human.jpg" alt="Human first" width="1400" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We build user-centric, adaptive digital products that are designed for adoption and growth.</p>
+                <p class="ut-service__copy">Design for people’s needs and emotions.</p>
                 <a class="ut-service__btn" href="work.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1876,14 +1894,14 @@
 
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">Composable commerce</h3>
+                <h3 class="ut-service__name">Creative freedom</h3>
                 <span class="ut-service__num" aria-hidden="true">04</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/checkout-experience.jpg" alt="Commerce and checkout experience" width="1400" height="900" loading="lazy" decoding="async" />
+                <img src="Assets/values/value-freedom.jpg" alt="Creative freedom" width="1400" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We build ecommerce solutions thinking around your business, not your platform.</p>
+                <p class="ut-service__copy">Challenge the ordinary.</p>
                 <a class="ut-service__btn" href="work.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1893,14 +1911,14 @@
 
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">Customer experience</h3>
+                <h3 class="ut-service__name">Craft &amp; quality</h3>
                 <span class="ut-service__num" aria-hidden="true">05</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/nurse-station.jpg" alt="Customer experience touchpoints" width="1400" height="900" loading="lazy" decoding="async" />
+                <img src="Assets/values/value-craft.jpg" alt="Craft and quality" width="1400" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We deliver exceptional experiences for businesses and customers that optimize channels, sales and loyalty.</p>
+                <p class="ut-service__copy">Care from first sketch to final code.</p>
                 <a class="ut-service__btn" href="work.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1910,14 +1928,14 @@
 
             <li class="ut-service" role="listitem">
               <div class="ut-service__head">
-                <h3 class="ut-service__name">AI activation</h3>
+                <h3 class="ut-service__name">Meaningful impact</h3>
                 <span class="ut-service__num" aria-hidden="true">06</span>
               </div>
               <div class="ut-service__media">
-                <img src="Assets/optimized/war-room.jpg" alt="AI activation and operations" width="1400" height="900" loading="lazy" decoding="async" />
+                <img src="Assets/values/value-impact.jpg" alt="Meaningful impact" width="1400" height="900" loading="lazy" decoding="async" />
               </div>
               <div class="ut-service__body">
-                <p class="ut-service__copy">We amplify AI adoption and transform operations through action. No theory, all results.</p>
+                <p class="ut-service__copy">Measure change, not just appearance.</p>
                 <a class="ut-service__btn" href="contact.html">
                   <span>Explore</span>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><path fill-rule="evenodd" d="M11.648 6.321h14.893v14.892h-1.5V8.823L8.724 24.394h12.49v1.5H6.322V11h1.5v12.18L23.918 7.82h-12.27v-1.5Z" clip-rule="evenodd"/></svg>
@@ -1933,7 +1951,7 @@
 
       <!-- Utopia Tokyo–style intro (glitch headline + kanji + 3D) -->
       <section class="cc-intro" role="region" aria-labelledby="intro-title">
-        <h2 id="intro-title" class="visually-hidden">Craft, speed, clarity, systems, vision, impact, and related studio capabilities</h2>
+        <h2 id="intro-title" class="visually-hidden">Curiosity, innovation, human-first design, creative freedom, craft, impact, and related Novifaro values</h2>
         <div class="cc-intro__stack">
           <div class="intro__computer-layer" aria-hidden="true">
             <div class="intro__computer-sticky">
@@ -1952,39 +1970,39 @@
               <div class="intro__content" aria-hidden="true">
                 <ul class="intro__text-list" role="list" aria-hidden="true">
                   <li class="intro__text-item">
-                    <div data-glitch="scroll" class="h2 glitch-target">Cr<strong>a</strong>ft<div class="glitch-artifacts" aria-hidden="true"></div></div>
-                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_intellect</div></div></div>
+                    <div data-glitch="scroll" class="h2 glitch-target">Cur<strong>i</strong>osity<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_question</div></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Sp<strong>e</strong>ed<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Inn<strong>o</strong>vation<div class="glitch-artifacts" aria-hidden="true"></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Cl<strong>a</strong>r<strong>i</strong>ty<div class="glitch-artifacts" aria-hidden="true"></div></div>
-                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_spirit</div></div></div>
+                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Hum<strong>a</strong>n<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_first</div></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-glitch="scroll" class="h2 glitch-target">Syst<strong>e</strong>ms<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div data-glitch="scroll" class="h2 glitch-target">Fre<strong>e</strong>dom<div class="glitch-artifacts" aria-hidden="true"></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">V<strong>i</strong>sion<div class="glitch-artifacts" aria-hidden="true"></div></div>
-                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_ferocity</div></div></div>
+                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Cr<strong>a</strong>ft<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_quality</div></div></div>
                   </li>
                   <li class="intro__text-item">
                     <div data-glitch="scroll" class="h2 glitch-target">Imp<strong>a</strong>ct<div class="glitch-artifacts" aria-hidden="true"></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">M<strong>o</strong>tion<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Cl<strong>e</strong>ar<div class="glitch-artifacts" aria-hidden="true"></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-glitch="scroll" class="h2 glitch-target">D<strong>e</strong>s<strong>i</strong>gn<div class="glitch-artifacts" aria-hidden="true"></div></div>
-                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_agility</div></div></div>
+                    <div data-glitch="scroll" class="h2 glitch-target">C<strong>o</strong>nf<strong>i</strong>dent<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_voice</div></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">Pr<strong>e</strong>cision<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div data-highlight-reveal data-glitch="scroll" class="h2 glitch-target">V<strong>i</strong>sionary<div class="glitch-artifacts" aria-hidden="true"></div></div>
                   </li>
                   <li class="intro__text-item">
-                    <div data-glitch="scroll" class="h2 glitch-target">S<strong>i</strong>gnal<div class="glitch-artifacts" aria-hidden="true"></div></div>
-                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_strength</div></div></div>
+                    <div data-glitch="scroll" class="h2 glitch-target">L<strong>i</strong>ght<div class="glitch-artifacts" aria-hidden="true"></div></div>
+                    <div class="intro__text-eyebrow" aria-hidden="true"><div class="mask"><div data-scramble-duration="3" data-scramble="scroll" class="eyebrow">data_beacon</div></div></div>
                   </li>
                 </ul>
               </div>
@@ -2010,16 +2028,16 @@
       <div class="ut-marquee-wrap ut-section" aria-hidden="true">
         <div class="ut-marquee">
           <div class="ut-marquee__track">
-            <span class="ut-marquee__item">CRAFT <span>•</span> OF <span>•</span> TOMORROW</span>
-            <span class="ut-marquee__item">INTERFACES <span>•</span> OF <span>•</span> TODAY</span>
-            <span class="ut-marquee__item">SYSTEMS <span>•</span> EXPERIENCE HOUSE</span>
-            <span class="ut-marquee__item">hidden histories converge with a reimagined future</span>
+            <span class="ut-marquee__item">WE DON’T JUST FOLLOW THE LIGHT</span>
+            <span class="ut-marquee__item">WE <span>•</span> CREATE <span>•</span> IT</span>
+            <span class="ut-marquee__item">NEW LIGHT <span>•</span> FOR WHAT COMES NEXT</span>
+            <span class="ut-marquee__item">ideas deserve to be seen</span>
           </div>
           <div class="ut-marquee__track" aria-hidden="true">
-            <span class="ut-marquee__item">CRAFT <span>•</span> OF <span>•</span> TOMORROW</span>
-            <span class="ut-marquee__item">INTERFACES <span>•</span> OF <span>•</span> TODAY</span>
-            <span class="ut-marquee__item">SYSTEMS <span>•</span> EXPERIENCE HOUSE</span>
-            <span class="ut-marquee__item">hidden histories converge with a reimagined future</span>
+            <span class="ut-marquee__item">WE DON’T JUST FOLLOW THE LIGHT</span>
+            <span class="ut-marquee__item">WE <span>•</span> CREATE <span>•</span> IT</span>
+            <span class="ut-marquee__item">NEW LIGHT <span>•</span> FOR WHAT COMES NEXT</span>
+            <span class="ut-marquee__item">ideas deserve to be seen</span>
           </div>
         </div>
       </div>
@@ -2030,16 +2048,16 @@
             <div class="ut-craft-discover__hero">
               <div class="ut-stack-type">
                 <div class="ut-stack-type__row">
-                  <p class="ut-stack-type__line">CRAFT</p>
-                  <p class="ut-stack-type__line is-fill">OF</p>
+                  <p class="ut-stack-type__line">NEW</p>
+                  <p class="ut-stack-type__line is-fill">LIGHT</p>
                 </div>
-                <p class="ut-stack-type__line">T<strong>O</strong>MORROW</p>
+                <p class="ut-stack-type__line">F<strong>O</strong>R WH<strong>A</strong>T C<strong>O</strong>MES NEXT</p>
               </div>
-              <p class="ut-manifesto">Faces of time, shadows of tomorrow. Disciplines of Experience House where craft and systems collide — hidden histories converge with a reimagined future, and every interface becomes a symbol of untold possibilities.</p>
+              <p class="ut-manifesto">Shape a future where creativity and technology work together to make the digital world more human, intelligent, and accessible. Strategy, design, engineering, and purposeful AI one connected creative partner.</p>
             </div>
             <div class="ut-craft-discover__panel">
-              <p class="ut-discover__label">&gt;_EXECUTE_CREATION</p>
-              <h2 class="ut-discover__title">DISCOVER Y<strong>O</strong>UR <strong>S</strong>TACK</h2>
+              <p class="ut-discover__label">&gt;_CREATE_THE_LIGHT</p>
+              <h2 class="ut-discover__title">DISCOVER Y<strong>O</strong>UR <strong>W</strong>AY</h2>
               <div class="ut-build-stats" id="buildStats"></div>
             </div>
           </div>
@@ -2065,14 +2083,14 @@
 
       <footer class="ut-section ut-footer">
         <div>
-          <p class="ut-footer__coords">35.6764°N / 139.6500°E — STUDIO</p>
+          <p class="ut-footer__coords">ONTARIO, CANADA NOVIFARO</p>
           <p class="ut-footer__copy">
-            Step into Experience House, where hidden histories converge with craft and systems.<br>
-            <a href="mailto:hello@isexperience.house">hello@isexperience.house</a> — Interfaces creation studio<br>
-            ©2026 Experience House
+            We don’t just follow the light. We create it.<br>
+            <a href="mailto:hello@isexperience.house">hello@isexperience.house</a> Brand strategy · digital products · purposeful AI<br>
+            ©2026 Novifaro
           </p>
         </div>
-        <p class="ut-footer__mark">E<strong>X</strong>PERIENCE<br><strong>H</strong>OUSE</p>
+        <p class="ut-footer__mark">N<strong>O</strong>VIFARO<br><strong>N</strong>EW LIGHT</p>
       </footer>
 
     </section>
@@ -2080,15 +2098,22 @@
     <!-- Bottom-left: logo + pills -->
     <div class="bottom-left">
       <a href="index.html" aria-label="Go to home">
-        <svg class="logo-svg" width="310" height="328" viewBox="0 0 310 328" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M309.689 240.691C309.689 253.905 307.329 265.861 302.61 276.558C298.205 287.256 291.755 296.537 283.26 304.403C274.765 311.954 264.382 317.775 252.112 321.865C240.156 325.955 226.627 328 211.525 328C198.625 328 185.725 326.584 172.825 323.752C160.24 321.235 148.756 317.46 138.374 312.426C128.306 307.392 119.968 301.414 113.361 294.492C107.068 287.256 103.922 279.233 103.922 270.423V219.925H112.417C117.766 251.703 128.148 274.513 143.565 288.357C159.296 302.2 180.534 309.122 207.277 309.122C215.458 309.122 223.166 308.178 230.402 306.291C237.954 304.088 244.561 300.942 250.224 296.852C255.887 292.762 260.449 287.728 263.91 281.75C267.371 275.772 269.102 268.85 269.102 260.984C269.102 247.14 264.697 235.342 255.887 225.588C247.392 215.835 234.493 205.924 217.188 195.856L159.139 161.404C139.003 149.448 124.687 137.335 116.192 125.065C108.012 112.794 103.922 97.8494 103.922 80.2302C103.922 67.9597 106.124 56.9477 110.529 47.1943C114.934 37.4408 121.069 29.1031 128.935 22.1813C137.115 14.9448 146.711 9.43884 157.723 5.66332C169.05 1.88777 181.635 0 195.479 0C207.12 0 218.919 1.25852 230.874 3.77555C243.145 6.29256 254.157 10.0681 263.91 15.1022C273.664 19.8216 281.687 25.7995 287.979 33.036C294.272 39.9578 297.418 47.8235 297.418 56.6331V107.131H288.923C283.575 75.3535 273.349 52.7002 258.247 39.1712C243.145 25.6422 222.222 18.8777 195.479 18.8777C188.557 18.8777 181.792 19.9789 175.185 22.1813C168.578 24.3837 162.757 27.53 157.723 31.6202C152.689 35.7103 148.599 40.7443 145.453 46.7223C142.307 52.7002 140.733 59.3074 140.733 66.5439C140.733 73.4657 141.835 79.6009 144.037 84.9496C146.239 90.2983 149.543 95.3324 153.948 100.052C158.353 104.771 163.859 109.491 170.466 114.21C177.073 118.615 184.624 123.334 193.119 128.368L251.168 162.82C261.236 168.798 269.888 174.619 277.125 180.282C284.676 185.631 290.811 191.451 295.531 197.744C300.25 203.722 303.711 210.172 305.913 217.094C308.43 224.015 309.689 231.881 309.689 240.691Z" fill="#FFFFFF"/>
-          <path d="M0 8.49512H42.4748V263.344C42.4748 277.502 44.3626 288.986 48.1381 297.796C52.2283 306.291 61.3525 310.538 75.5108 310.538H84.9497V319.977H42.4748C34.2945 319.977 27.3727 319.348 21.7094 318.089C16.3607 316.516 11.9559 313.685 8.49497 309.594C5.34868 305.19 3.14628 299.369 1.88777 292.132C0.629256 284.896 0 275.3 0 263.344V8.49512Z" fill="#FFFFFF"/>
+        <svg class="logo-svg" width="513" height="301" viewBox="0 0 513 301" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M392.578 141.4V1.39999H415.778V141.4H392.578Z" fill="currentColor"/>
+        <path d="M281.006 141.4L260.406 1.39999H283.806L301.406 118.6C306.473 117.8 311.473 116.467 316.406 114.6C321.473 112.6 326.006 109.933 330.006 106.6C334.006 103.133 337.206 98.8 339.606 93.6C342.006 88.2667 343.206 81.8 343.206 74.2V1.39999H366.406V74.4C366.273 86.6667 363.94 97.0667 359.406 105.6C355.006 114.133 349.14 121.067 341.806 126.4C334.606 131.6 326.54 135.4 317.606 137.8C308.806 140.2 299.94 141.4 291.006 141.4H281.006Z" fill="currentColor"/>
+        <path d="M183.13 142.6C174.73 142.6 166.93 140.933 159.73 137.6C152.53 134.267 146.263 129.667 140.93 123.8C135.596 117.8 131.396 110.867 128.33 103C125.396 95.1333 123.93 86.7333 123.93 77.8V64.6C123.93 55.8 125.396 47.5333 128.33 39.8C131.396 31.9333 135.596 25.0667 140.93 19.2C146.263 13.2 152.53 8.53333 159.73 5.19999C166.93 1.73333 174.73 0 183.13 0C191.53 0 199.33 1.73333 206.53 5.19999C213.73 8.53333 219.996 13.2 225.33 19.2C230.663 25.0667 234.796 31.9333 237.73 39.8C240.796 47.5333 242.33 55.8 242.33 64.6V77.8C242.33 86.7333 240.796 95.1333 237.73 103C234.796 110.867 230.663 117.8 225.33 123.8C219.996 129.667 213.73 134.267 206.53 137.6C199.33 140.933 191.53 142.6 183.13 142.6ZM183.13 120.4C190.596 120.4 196.93 118.533 202.13 114.8C207.33 111.067 211.33 106 214.13 99.6C216.93 93.2 218.33 85.9333 218.33 77.8V64.6C218.33 51.9333 215.196 41.7333 208.93 34C202.796 26.1333 194.196 22.2 183.13 22.2C172.063 22.2 163.396 26.1333 157.13 34C150.996 41.7333 147.93 51.9333 147.93 64.6V77.8C147.93 85.9333 149.33 93.2 152.13 99.6C154.93 106 158.93 111.067 164.13 114.8C169.463 118.533 175.796 120.4 183.13 120.4Z" fill="currentColor"/>
+        <path d="M0 141.4V1.39999H21.8C29.1333 1.39999 36.6 1.99999 44.2 3.19999C51.9333 4.26666 59.3333 6.26666 66.4 9.2C73.4667 12 79.8 15.9333 85.4 21C91.1333 26.0667 95.6667 32.4667 99 40.2C102.333 47.9333 104 57.3333 104 68.4V141.4H80.8V68.6C80.8 58.6 79.0667 50.5333 75.6 44.4C72.1333 38.1333 67.5333 33.4 61.8 30.2C56.0667 27 49.8 24.8 43 23.6C36.3333 22.4 29.7333 21.8 23.2 21.8V141.4H0Z" fill="currentColor"/>
+        <path d="M485.602 299.2V272.4H512.402V299.2H485.602Z" fill="currentColor"/>
+        <path d="M408.325 300.6C399.925 300.6 392.125 298.933 384.925 295.6C377.725 292.267 371.458 287.667 366.125 281.8C360.792 275.8 356.592 268.867 353.525 261C350.592 253.133 349.125 244.733 349.125 235.8V222.6C349.125 213.8 350.592 205.533 353.525 197.8C356.592 189.933 360.792 183.067 366.125 177.2C371.458 171.2 377.725 166.533 384.925 163.2C392.125 159.733 399.925 158 408.325 158C416.725 158 424.525 159.733 431.725 163.2C438.925 166.533 445.192 171.2 450.525 177.2C455.858 183.067 459.992 189.933 462.925 197.8C465.992 205.533 467.525 213.8 467.525 222.6V235.8C467.525 244.733 465.992 253.133 462.925 261C459.992 268.867 455.858 275.8 450.525 281.8C445.192 287.667 438.925 292.267 431.725 295.6C424.525 298.933 416.725 300.6 408.325 300.6ZM408.325 278.4C415.792 278.4 422.125 276.533 427.325 272.8C432.525 269.067 436.525 264 439.325 257.6C442.125 251.2 443.525 243.933 443.525 235.8V222.6C443.525 209.933 440.392 199.733 434.125 192C427.992 184.133 419.392 180.2 408.325 180.2C397.258 180.2 388.592 184.133 382.325 192C376.192 199.733 373.125 209.933 373.125 222.6V235.8C373.125 243.933 374.525 251.2 377.325 257.6C380.125 264 384.125 269.067 389.325 272.8C394.658 276.533 400.992 278.4 408.325 278.4Z" fill="currentColor"/>
+        <path d="M240.234 299.4V159.4H336.634C337.034 172.067 335.768 183 332.834 192.2C330.034 201.4 326.234 209.2 321.434 215.6C316.634 221.867 311.434 227 305.834 231L343.034 299.4H316.834L285.434 241.6C280.501 243.333 276.101 244.533 272.234 245.2C268.368 245.733 265.568 246 263.834 246V299.4H240.234ZM263.434 223.8C270.501 223.8 277.101 222.4 283.234 219.6C289.368 216.8 294.701 213.2 299.234 208.8C303.901 204.267 307.501 199.467 310.034 194.4C312.701 189.333 314.034 184.533 314.034 180H263.434V223.8Z" fill="currentColor"/>
+        <path d="M112.305 299.4V159.4H135.505C142.838 159.4 150.238 160 157.705 161.2C165.305 162.4 172.571 164.467 179.505 167.4C186.571 170.2 192.838 174.2 198.305 179.4C203.905 184.467 208.305 190.867 211.505 198.6C214.705 206.2 216.305 215.467 216.305 226.4V299.4H193.105V252.8H135.505V299.4H112.305ZM135.505 230.8H193.105V226.6C193.105 216.6 191.305 208.533 187.705 202.4C184.238 196.267 179.638 191.6 173.905 188.4C168.171 185.067 161.905 182.8 155.105 181.6C148.438 180.4 141.905 179.8 135.505 179.8V230.8Z" fill="currentColor"/>
+        <path d="M0 299.4V159.4H92.4V181.4H23.2V207.6H81.4V229H23.2V299.4H0Z" fill="currentColor"/>
         </svg>
       </a>
       <nav class="pills" id="primary-nav" aria-label="Primary">
-        <a class="pill" href="work.html"><i class="dot" aria-hidden="true"></i> Website</a>
-        <a class="pill is-active" href="About.html" aria-current="page"><i class="dot" aria-hidden="true"></i> Our House</a>
-        <a class="pill" href="contact.html"><i class="dot" aria-hidden="true"></i> Let's Talk</a>
+        <a class="pill" href="work.html"><i class="dot" aria-hidden="true"></i> Work</a>
+        <a class="pill is-active" href="About.html" aria-current="page"><i class="dot" aria-hidden="true"></i> About</a>
+        <a class="pill" href="contact.html"><i class="dot" aria-hidden="true"></i> Contact</a>
       </nav>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
         <span class="nav-toggle__bar" aria-hidden="true"></span>
@@ -2137,11 +2162,11 @@
     /* Hero gallery slider */
     (function() {
       const slides = [
-        { label: 'Research', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80&auto=format&fit=crop' },
-        { label: 'Strategy', img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80&auto=format&fit=crop' },
-        { label: 'Design', img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80&auto=format&fit=crop' },
-        { label: 'Development', img: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80&auto=format&fit=crop' },
-        { label: 'Quality Check', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80&auto=format&fit=crop' }
+        { label: 'Secure', img: 'Assets/momentum/momentum-secure.jpg' },
+        { label: 'Create', img: 'Assets/momentum/momentum-create.jpg' },
+        { label: 'Build', img: 'Assets/momentum/momentum-build.jpg' },
+        { label: 'Launch', img: 'Assets/momentum/momentum-launch.jpg' },
+        { label: 'Grow', img: 'Assets/momentum/momentum-grow.jpg' }
       ];
       const list = document.getElementById('heroSlides');
       const track = document.getElementById('paginationTrack');
@@ -2257,12 +2282,12 @@
     /* Discover your stack */
     (function() {
       const STAT_KEYS = [
-        { key: 'craft', label: 'CRAFT', jp: 'クラフト' },
-        { key: 'speed', label: 'SPEED', jp: 'スピード' },
-        { key: 'clarity', label: 'CLARITY', jp: '明瞭' },
-        { key: 'systems', label: 'SYSTEMS', jp: 'システム' },
-        { key: 'vision', label: 'VISION', jp: 'ビジョン' },
-        { key: 'impact', label: 'IMPACT', jp: 'インパクト' }
+        { key: 'craft', label: 'STRATEGY', jp: '戦略' },
+        { key: 'speed', label: 'DESIGN', jp: 'デザイン' },
+        { key: 'clarity', label: 'ENGINEERING', jp: '実装' },
+        { key: 'systems', label: 'AI', jp: '知能' },
+        { key: 'vision', label: 'CRAFT', jp: '品質' },
+        { key: 'impact', label: 'IMPACT', jp: '成果' }
       ];
       const buildStats = document.getElementById('buildStats');
       if (!buildStats) return;
@@ -2303,7 +2328,7 @@
       renderStats();
     })();
 
-    /* Unicorn Studio — intro 3D background (ruhkfDBZQc8ZllOQ4Fr8) */
+    /* Unicorn Studio intro 3D background (ruhkfDBZQc8ZllOQ4Fr8) */
     (function(){
       function loadUS() {
         var s = document.createElement('script');
@@ -2342,7 +2367,7 @@
 
     /* -------- Custom cursor logic -------- */
     (function(){
-      const dot  = document.getElementById('cursorDot');
+      const dot = document.getElementById('cursorDot');
       const ring = document.getElementById('cursorRing');
 
       if (!dot || !ring) return;
@@ -2354,7 +2379,7 @@
       function move(e){
         x = e.clientX;
         y = e.clientY;
-        dot.style.transform  = `translate(${x}px, ${y}px)`;
+        dot.style.transform = `translate(${x}px, ${y}px)`;
       }
 
       function tick(){
@@ -2384,7 +2409,7 @@
       window.addEventListener('mousemove', updateHover, {passive:true});
 
       window.addEventListener('mousedown', ()=> ring.style.opacity = '0.7');
-      window.addEventListener('mouseup',   ()=> ring.style.opacity = '0.9');
+      window.addEventListener('mouseup', ()=> ring.style.opacity = '0.9');
 
       window.addEventListener('mouseleave', ()=> {
         dot.style.opacity = '0'; ring.style.opacity = '0';
@@ -2477,7 +2502,7 @@
       transition.style.setProperty('background', landBg, 'important');
       transition.style.setProperty('background-color', landBg, 'important');
 
-      // Reveal page content — never leave the overlay stuck
+      // Reveal page content never leave the overlay stuck
       let revealed = false;
       const revealPage = () => {
         if (revealed) return;
@@ -2622,7 +2647,7 @@
   </script>
   <script>
 
-    /* What we do — sticky horizontal scrub (desktop) */
+    /* What we do sticky horizontal scrub (desktop) */
     (function() {
       const section = document.querySelector('.ut-services');
       const scrollEl = document.getElementById('servicesScroll');
