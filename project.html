@@ -1216,7 +1216,7 @@
       border-right-color: var(--fg);
     }
     body.project-page--live .bottom-left .logo-svg path {
-      fill: #ffffff;
+      fill: #CE4127;
     }
 
     /* Gatorade only: black ground, white copy, red logo + nav text */
@@ -1498,6 +1498,28 @@
       object-position: center;
     }
 
+    .examples__hero-video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: clamp(1rem, 3vw, 3rem);
+      box-sizing: border-box;
+    }
+    .examples__hero-video video {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    body.project-page--live .examples__hero,
+    body.project-page--live .examples__live-site {
+      background: transparent;
+    }
+
     .examples__hero-img {
       display: block;
       width: 100%;
@@ -1758,10 +1780,6 @@
     }
 
     @media (max-width: 470px) {
-      .examples__left--embed {
-        display: none !important;
-      }
-
       body.project-page--live .center {
         align-items: center;
         justify-content: center;
@@ -2085,19 +2103,8 @@
       '01': {
         name: 'GATORADE',
         number: '01',
-        heroImage: 'Assets/work-placeholders/01-hero.svg',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/gatorade/frames/01.jpg', alt: 'Gatorade page section 1' },
-          { type: 'image', src: 'Assets/gatorade/frames/02.jpg', alt: 'Gatorade page section 2' },
-          { type: 'image', src: 'Assets/gatorade/frames/03.jpg', alt: 'Gatorade page section 3' },
-          { type: 'image', src: 'Assets/gatorade/frames/04.jpg', alt: 'Gatorade page section 4' },
-          { type: 'video', src: 'Assets/gatorade/vid/01-breathing.mp4', alt: 'Athletes breathing with glitch' },
-          { type: 'video', src: 'Assets/gatorade/vid/02-preparing.mp4', alt: 'Athletes preparing for explosive movement' },
-          { type: 'video', src: 'Assets/gatorade/vid/03-webad.mp4', alt: 'Gatorade web ad' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/gatorade/',
-        video: '/Users/shamrikin/Desktop/ISstudio/Work/CuttingEdgeSites/Studio Portfolio/Video/Screen Recording 2025-12-05 at 3.02.08 PM.mov',
+        video: 'Video/gatorade.mp4',
         description: 'We created a comprehensive digital experience including website, landing pages, and content strategy for Gatorade\'s new energy drink launch.',
         tagline: 'Fuel Your Performance',
         businessDescription: 'Gatorade is a leading sports nutrition brand specializing in hydration and energy products for athletes. Founded in 1965, the brand provides scientifically-formulated beverages that help athletes maintain peak performance through optimal hydration and energy replenishment.',
@@ -2114,11 +2121,6 @@
             'Initial Brief: Gatorade\'s marketing team came to us with a clear vision: create a website and landing pages that would appeal to the next generation of athletes while maintaining the brand\'s credibility and performance-focused reputation.',
             'Our Approach: We began by conducting extensive research into the target audience\'s digital behavior, content consumption patterns, and what messaging would resonate with athletes who push their limits daily. This research informed our entire strategy.',
             'The Opportunity: This wasn\'t just another product launch it was an opportunity to redefine how Gatorade communicates with athletes digitally, breaking away from traditional sports drink marketing to something more modern and lifestyle-oriented.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         process: {
@@ -2131,11 +2133,6 @@
             'Phase 4: Development & Content - Built responsive websites and landing pages while simultaneously developing all copy, visual content, and interactive features. We ensured the technical foundation supported fast loading and seamless user experiences.',
             'Phase 5: Testing & Refinement - Conducted user testing, A/B testing, and performance optimization. We refined messaging, design elements, and user flows based on real user feedback and conversion data before launch.',
             'Phase 6: Launch & Iteration - Launched the website alongside Gatorade\'s product launch, then continuously monitored performance and made iterative improvements based on analytics and user behavior patterns.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         assets: {
@@ -2148,12 +2145,6 @@
             'Content Library: Developed extensive copy for product pages, landing pages, blog content, and social media. Created messaging frameworks that could be adapted for different campaigns and audience segments.',
             'Interactive Components: Built interactive features including flavor finder quizzes, nutrition calculators, athlete spotlights, and product comparison tools. These components engage users beyond basic product information.',
             'Landing Page Templates: Designed and developed flexible landing page templates that could be quickly customized for different campaigns, seasonal promotions, and targeted audience segments.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         finalResult: {
@@ -2166,20 +2157,14 @@
             'Design System: A complete design system and component library that ensures brand consistency across all digital touchpoints. This system has been extended to other Gatorade products and initiatives.',
             'Performance Metrics: The website achieved strong performance metrics including increased engagement time, higher conversion rates, and positive user feedback. The digital experience successfully positioned the product as a premium, athlete-focused energy solution.',
             'Ongoing Partnership: We continue to work with Gatorade to create new landing pages, update content, and refine the digital experience based on user data and evolving marketing needs.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1800&q=80'
           ]
         }
       },
       '02': {
         name: 'MAGIC SPOON',
         number: '02',
-        heroImage: 'Assets/work-placeholders/02-hero.svg',
         liveSiteUrl: 'https://is-studio-hub.github.io/Magic-Spoon/',
-        video: '/Users/shamrikin/Desktop/ISstudio/Work/CuttingEdgeSites/Studio Portfolio/Video/Screen Recording 2025-12-07 at 10.40.28 AM.mov',
+        video: 'Video/magicspoon.mp4',
         description: 'We designed and developed a complete website and digital experience for Magic Spoon, a cereal brand targeting health-conscious younger audiences.',
         tagline: 'Cereal That\'s Actually Good For You',
         businessDescription: 'Magic Spoon is a modern cereal brand creating high-protein, low-carb cereals that taste like childhood favorites. Founded in 2019, the brand targets health-conscious millennials and Gen Z with zero-sugar, grain-free options available in flavors like Fruity, Cocoa, and Peanut Butter.',
@@ -2196,11 +2181,6 @@
             'Initial Brief: The brand came to us with a clear vision: create a digital experience that speaks directly to younger audiences using language and visuals that resonate with their values around wellness and authenticity. They needed to stand out in a crowded market.',
             'Our Approach: We began by researching the target audience\'s breakfast habits, health priorities, and digital behavior patterns. We discovered that Gen Z and Millennials wanted products that aligned with their values without sacrificing enjoyment.',
             'The Opportunity: This was a chance to redefine how a cereal brand communicates digitally, moving away from traditional marketing to something more modern, playful, and community-focused that would resonate with the next generation.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         process: {
@@ -2213,11 +2193,6 @@
             'Phase 4: Interactive Features - Developed website features including flavor explorer tools, recipe pages, nutrition calculators, and community sections that foster engagement and create a sense of belonging.',
             'Phase 5: E-commerce Integration - Built flexible e-commerce functionality and subscription management systems that support regular product launches, limited edition flavors, and seasonal campaigns.',
             'Phase 6: Testing & Launch - Conducted user testing with target demographics, refined the experience based on feedback, and launched with a content system that allows Magic Spoon to easily update the site with new products and campaigns.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         assets: {
@@ -2230,12 +2205,6 @@
             'Interactive Components: Built interactive features including flavor explorer tools, recipe generators, nutrition calculators, and social sharing functionality that engage users beyond basic product browsing.',
             'Content Library: Developed extensive copy for product pages, recipe content, nutrition information, and community sections. Created messaging that speaks directly to younger audiences without feeling condescending.',
             'E-commerce Assets: Designed product detail pages, subscription flows, and checkout experiences that make purchasing easy and enjoyable. Created visual elements for limited edition flavors and seasonal campaigns.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         finalResult: {
@@ -2248,22 +2217,16 @@
             'Design System: A complete design system and component library ensuring brand consistency across all digital touchpoints. The system has been extended to social media, email campaigns, and other marketing materials.',
             'Performance Metrics: The website achieved strong performance including increased engagement time, higher conversion rates, and positive user feedback. The digital experience successfully positioned Magic Spoon as a premium, health-focused brand.',
             'Community Building: The website successfully fostered a community of Magic Spoon fans who share recipes, participate in challenges, and advocate for the brand. This community engagement has become a key differentiator.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1526318896980-cf78c088247c?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1485921325833-c519f76c4927?auto=format&fit=crop&w=1800&q=80'
           ]
         }
       },
       '03': {
         name: 'OZINT SECURITY',
         number: '03',
-        heroImage: 'Assets/work-placeholders/03-hero.svg',
         liveSiteUrl: 'https://www.ozintsecurity.com/',
         liveEmbedScript: 'embeds/ozint-embed.js',
         liveEmbedPath: 'embeds/ozint-embed.html',
-        video: '/Users/shamrikin/Desktop/ISstudio/Work/CuttingEdgeSites/Studio Portfolio/Video/Screen Recording 2025-12-06 at 5.44.12 PM.mov',
+        video: 'Video/ozint.mp4',
         description: 'We designed and developed a comprehensive website and digital platform for Ozint Security, a security solutions provider for businesses and individuals.',
         tagline: 'Protecting What Matters Most',
         businessDescription: 'Ozint Security provides comprehensive cybersecurity and physical security solutions for businesses. The company offers enterprise-grade services including network protection, threat intelligence, and incident response, serving clients across finance, healthcare, technology, and government sectors.',
@@ -2280,12 +2243,6 @@
             'Initial Brief: The company came to us with a clear need: create a website that addresses the full spectrum of security needs network protection, endpoint security, data encryption, threat intelligence, and incident response while building trust and credibility.',
             'Our Approach: We began by researching how businesses evaluate security providers, understanding both the technical requirements and the trust-building elements needed. We discovered that potential clients needed clear explanations without being overwhelmed by jargon.',
             'The Opportunity: This was a chance to create a website that not only explains security services but demonstrates security best practices itself, building credibility through both content and technical execution.'
-          ],
-          media: [
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf5c2_soldeir%20V1.gif', alt: 'Soldier V1' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf5c1_CHESS%20V2.gif', alt: 'Chess V2' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf5c0_Cam%20v1.gif', alt: 'Cam V1' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf5bf_Drone%20V1.gif', alt: 'Drone V1' }
           ]
         },
         process: {
@@ -2298,12 +2255,6 @@
             'Phase 4: Content Creation - Developed all website copy, service descriptions, and landing page content. Created industry-specific pages for finance, healthcare, technology, and government sectors.',
             'Phase 5: Testing & Refinement - Conducted user testing with potential clients, refined messaging based on feedback, and ensured the website meets WCAG 2.1 AA accessibility standards.',
             'Phase 6: Launch & Optimization - Launched the website and began monitoring performance. Created a content system that allows Ozint Security to easily update pages and add new service offerings.'
-          ],
-          media: [
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693c89b718f2df1b25d6abf5_12.png', alt: 'Security Intelligence' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf639_Security%20Intelligence.png', alt: 'Security Intelligence' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf690_Environmentally%20Responsible%20-%20Low-emission%20fleet%20and%20sustainable%20technology%20practicess%20.png', alt: 'Environmentally Responsible' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693c8cfbcf457672ff30e82a_Private%20Intelligence%20.png', alt: 'Private Intelligence' }
           ]
         },
         assets: {
@@ -2316,14 +2267,6 @@
             'Compliance Content: Created comprehensive content explaining regulatory compliance support including GDPR, HIPAA, SOC 2, and industry-specific standards. Developed visual guides and documentation.',
             'Trust-Building Elements: Designed case studies, testimonials, certification displays, and security badge sections that build credibility and demonstrate expertise.',
             'Documentation & Resources: Created help documentation, security guides, whitepapers, and resource libraries that position Ozint Security as thought leaders in the security space.'
-          ],
-          media: [
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf626_Executive%20Protection.png', alt: 'Executive Protection' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf624_Community%20Protection1.png', alt: 'Community Protection' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf622_Residential%20Protection.png', alt: 'Residential Protection' },
-            { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf628_Protective%20Information%20Analysis.gif', alt: 'Protective Information Analysis' },
-            { type: 'youtube', src: 'https://www.youtube.com/embed/w7Set1ad2pc?autoplay=1&mute=1&loop=1&playlist=w7Set1ad2pc&controls=0&modestbranding=1&playsinline=1&rel=0', alt: 'Security Video 1' },
-            { type: 'youtube', src: 'https://www.youtube.com/embed/NSvsTcZ8bX4?autoplay=1&mute=1&loop=1&playlist=NSvsTcZ8bX4&controls=0&modestbranding=1&playsinline=1&rel=0', alt: 'Security Video 2' }
           ]
         },
         finalResult: {
@@ -2336,18 +2279,14 @@
             'Performance Metrics: The website achieved strong performance including increased qualified leads, higher engagement with service pages, and positive feedback from potential clients. The site successfully communicates trust and expertise.',
             'Industry Recognition: The website has been recognized for its clear communication of complex security concepts and professional design. It serves as a model for how security companies can build trust online.',
             'Ongoing Partnership: We continue to work with Ozint Security to create new content, update service pages, and refine the website based on client feedback and evolving security industry needs.'
-          ],
-          media: [
-            { type: 'video', src: 'Video/Screen Recording 2025-12-06 at 5.44.12 PM.mov', alt: 'Final Result Video' }
           ]
         }
       },
       '04': {
         name: 'SUPERLOCAL',
         number: '04',
-        heroImage: 'Assets/work-placeholders/04-hero.svg',
         liveSiteUrl: 'https://is-studio-hub.github.io/superlocal/',
-        video: '/Users/shamrikin/Desktop/ISstudio/Work/CuttingEdgeSites/Studio Portfolio/Video/Screen Recording 2025-12-25 at 10.14.29 PM.mov',
+        video: 'Video/superlocal.mp4',
         description: 'We created an event mini-site and digital experience for Superlocal, a local pop-up market initiative that brings fresh produce directly to neighborhoods.',
         tagline: 'Fresh From the Community',
         businessDescription: 'Superlocal organizes pop-up farmers markets in neighborhoods, connecting local farmers directly with residents. The initiative promotes sustainable agriculture, supports small-scale farmers, and strengthens community bonds through fresh produce, artisanal products, and educational workshops.',
@@ -2364,12 +2303,6 @@
             'Initial Brief: The organization came to us with a vision: create a mini-site that captures the spirit of farmers markets warm, inviting, and community-centered. They needed to make it easy for people to discover markets, learn about featured ingredients, and connect with local growers.',
             'Our Approach: We began by understanding Superlocal\'s community partnerships, market locations, and how they coordinate events. We researched how people discover local markets and what information they need to participate.',
             'The Opportunity: This was a chance to create a digital experience that celebrates local food, supports small-scale farmers, and builds community connections. The site needed to feel like a neighborhood gathering, not a corporate website.'
-          ],
-          media: [
-            { type: 'image', src: 'Peppers/Content/RedPepper.png', alt: 'Red pepper' },
-            { type: 'image', src: 'Peppers/Content/OrangePepper.png', alt: 'Orange pepper' },
-            { type: 'image', src: 'Peppers/Content/greenp.png', alt: 'Green pepper' },
-            { type: 'image', src: 'Peppers/Content/Jalapino.png', alt: 'Jalapeño pepper' }
           ]
         },
         process: {
@@ -2382,12 +2315,6 @@
             'Phase 4: Content Creation - Created pages for featured ingredients (like peppers), grower profiles, recipes, cooking workshops, and market schedules. Developed content that helps visitors discover markets and seasonal produce.',
             'Phase 5: User Testing - Tested the site with market attendees to ensure it removes barriers to participation and encourages community engagement. Refined navigation and content based on feedback.',
             'Phase 6: Launch & Updates - Launched the mini-site and created a content system that allows Superlocal to easily update market dates, featured ingredients, and seasonal information as their program evolves.'
-          ],
-          media: [
-            { type: 'image', src: 'Peppers/Content/yellowp.png', alt: 'Yellow pepper' },
-            { type: 'image', src: 'Peppers/Content/HotRedPeppers.png', alt: 'Hot red peppers' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini Flash_use the green pepper from the reference image on darker red color flat smooth backgro 236760.png', alt: 'Green pepper design' },
-            { type: 'image', src: 'Peppers/Content/repp.png', alt: 'Red pepper variety' }
           ]
         },
         assets: {
@@ -2400,20 +2327,6 @@
             'Event & Calendar Assets: Built interactive calendar components showing market dates, locations, and featured ingredients. Created event pages for cooking workshops, demonstrations, and educational programs.',
             'Content Library: Developed extensive copy for market information, grower stories, recipe collections, and community features. Created messaging that emphasizes sustainability and local agriculture.',
             'Mobile-Optimized Components: Designed and built mobile-first components including location finders, event reminders, and social sharing features that work seamlessly on phones since many users access the site at markets.'
-          ],
-          media: [
-            { type: 'image', src: 'Peppers/Content/RedPepper.png', alt: 'Red pepper' },
-            { type: 'image', src: 'Peppers/Content/OrangePepper.png', alt: 'Orange pepper' },
-            { type: 'image', src: 'Peppers/Content/Jalapino.png', alt: 'Jalapeño pepper' },
-            { type: 'image', src: 'Peppers/Content/greenp.png', alt: 'Green pepper' },
-            { type: 'image', src: 'Peppers/Content/yellowp.png', alt: 'Yellow pepper' },
-            { type: 'image', src: 'Peppers/Content/HotRedPeppers.png', alt: 'Hot red peppers' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini Flash_use the green pepper from the reference image on darker red color flat smooth backgro 236760.png', alt: 'Green pepper on red background' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini Flash_use the small green peppers from the reference image on darker red color flat smooth 236760.png', alt: 'Small green peppers' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini-Flash_darker-green-color-flat-smooth-background,-realistic-shadows.-and-use-the-peppers-fro-380308.png', alt: 'Peppers with shadows' },
-            { type: 'image', src: 'Peppers/Content/repp.png', alt: 'Red pepper' },
-            { type: 'image', src: 'Peppers/Content/scraping.png', alt: 'Scraping process' },
-            { type: 'video', src: 'Peppers/Content/scraping.mp4', alt: 'Scraping video' }
           ]
         },
         finalResult: {
@@ -2426,24 +2339,12 @@
             'Design System: A complete design system with warm, earthy visuals that can be extended to social media, email campaigns, and printed materials. The system maintains consistency while feeling organic and community-focused.',
             'Performance Metrics: The mini-site achieved strong performance including increased market attendance, higher engagement with featured ingredient content, and positive feedback from both market attendees and farmers.',
             'Ongoing Support: We continue to work with Superlocal to update content, add new featured ingredients, and refine the site based on community feedback and evolving market needs.'
-          ],
-          media: [
-            { type: 'image', src: 'Peppers/Content/RedPepper.png', alt: 'Red pepper final' },
-            { type: 'image', src: 'Peppers/Content/OrangePepper.png', alt: 'Orange pepper final' },
-            { type: 'image', src: 'Peppers/Content/Jalapino.png', alt: 'Jalapeño pepper final' },
-            { type: 'image', src: 'Peppers/Content/greenp.png', alt: 'Green pepper final' },
-            { type: 'image', src: 'Peppers/Content/yellowp.png', alt: 'Yellow pepper final' },
-            { type: 'image', src: 'Peppers/Content/HotRedPeppers.png', alt: 'Hot red peppers final' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini Flash_use the green pepper from the reference image on darker red color flat smooth backgro 236760.png', alt: 'Green pepper design' },
-            { type: 'image', src: 'Peppers/Content/Firefly_Gemini-Flash_darker-green-color-flat-smooth-background,-realistic-shadows.-and-use-the-peppers-fro-380308.png', alt: 'Pepper design with shadows' },
-            { type: 'video', src: 'Peppers/Content/scraping.mp4', alt: 'Final scraping video' }
           ]
         }
       },
       '05': {
         name: 'DAHARI',
         number: '05',
-        heroImage: 'Assets/work-placeholders/05-hero.svg',
         liveSiteUrl: 'https://is-studio-hub.github.io/dahari/',
         video: 'Video/dahari.mp4',
         description: 'We designed and developed a premium digital experience for Dahari, an Israeli real estate developer, showcasing residential and commercial projects through an immersive, video-led website.',
@@ -2462,11 +2363,6 @@
             'Initial Brief: The client envisioned a video-led navigation system where each section projects under construction, residences, commercial, about, and contact opens as its own immersive chapter. The site had to communicate trust, craftsmanship, and long-term vision.',
             'Our Approach: We studied how buyers explore real estate online, mapped the full customer journey from first visit to contact, and defined a visual language rooted in architecture, light, and material quality.',
             'The Opportunity: This was a chance to elevate Dahari\'s digital presence beyond listings and floor plans creating a brand experience that reflects the care put into every building they develop.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1486406146926-c627a92d1dad?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         process: {
@@ -2479,11 +2375,6 @@
             'Phase 4: Development - Built a responsive, performance-optimized site with seamless video playback, accessible navigation, and a contact flow designed to convert interest into qualified leads.',
             'Phase 5: Content & Media - Produced and integrated video assets for each section, ensuring every chapter tells a distinct story while maintaining a unified brand atmosphere.',
             'Phase 6: Launch & Handoff - Delivered the live site with a clear content framework so Dahari can update projects and media as new developments come to market.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1516156008622-3a9f606aa961?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         assets: {
@@ -2496,12 +2387,6 @@
             'Photography & Film Direction: Art-directed imagery and silent video loops that convey atmosphere, material quality, and the feeling of each space before a single word is read.',
             'Contact & Inquiry Flow: Designed a streamlined contact experience that encourages serious inquiries while maintaining the site\'s premium, unhurried tone.',
             'Responsive Components: Ensured every chapter and transition works flawlessly on desktop, tablet, and mobile critical for buyers researching properties on any device.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1800&q=80'
           ]
         },
         finalResult: {
@@ -2514,25 +2399,12 @@
             'Lead Generation: A clear contact pathway converts browsing interest into inquiries, supporting sales and partnership conversations without disrupting the premium feel of the site.',
             'Scalable Framework: A flexible structure allows Dahari to add new projects, update video content, and expand offerings as their portfolio grows.',
             'Ongoing Partnership: We continue to support Dahari with updates, new project pages, and refinements as developments progress from construction to completion.'
-          ],
-          images: [
-            'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1800&q=80',
-            'https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1800&q=80'
           ]
         }
       },
       '06': {
         name: 'LONELY GHOST',
         number: '06',
-        heroImage: 'Assets/lonelyghost/01-hero.png',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/lonelyghost/01-hero.png', alt: 'Lonely Ghost AI shopping assistant with Max' },
-          { type: 'image', src: 'Assets/lonelyghost/02-chat.png', alt: 'Lonely Ghost chat conversation with Max' },
-          { type: 'image', src: 'Assets/lonelyghost/og-image.jpg', alt: 'Lonely Ghost social preview with Max' },
-          { type: 'video', src: 'Video/lonelyghost.mp4', alt: 'Lonely Ghost experience preview' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/AIweb/',
         video: 'Video/lonelyghost.mp4',
         description: 'We designed and developed an AI-native shopping experience for Lonely Ghost featuring Max, a conversational sales associate who answers by text, voice, or live call.',
@@ -2551,11 +2423,6 @@
             'Initial Brief: Create a chat-first shopping experience with voice input, a speaking 3D character, bag and checkout, and a live call request flow secured through Stripe for payments.',
             'Our Approach: We designed a split interface chat on the left, Max on the right so conversation and character always stay in frame. Suggested prompts lower the barrier to asking.',
             'The Opportunity: Prove that AI commerce can feel warm, on-brand, and useful not a gimmick bolted onto a cart.'
-          ],
-          images: [
-            'Assets/lonelyghost/01-hero.png',
-            'Assets/lonelyghost/og-image.jpg',
-            'Assets/lonelyghost/02-chat.png'
           ]
         },
         process: {
@@ -2568,11 +2435,6 @@
             'Phase 4: Character & Voice - Integrated a real-time 3D Max with speaking states so answers feel present, not just typed.',
             'Phase 5: Commerce & Calls - Wired bag totals, shipping, Stripe-secure checkout, and the callback dialog for live conversations.',
             'Phase 6: Launch - Shipped the live experience at is-studio-hub.github.io/AIweb/ ready for shoppers to ask Max anything.'
-          ],
-          images: [
-            'Assets/lonelyghost/01-hero.png',
-            'Assets/lonelyghost/02-chat.png',
-            'Assets/lonelyghost/og-image.jpg'
           ]
         },
         assets: {
@@ -2585,11 +2447,6 @@
             'Stripe Checkout: Contact and shipping fields with card details handled on Stripe’s secure page.',
             'Live Call Flow: Floating call action and dialog to request an automated callback within seconds.',
             'Brand System: Dark UI, lime accents, and Lonely Ghost naming throughout the assistant experience.'
-          ],
-          images: [
-            'Assets/lonelyghost/01-hero.png',
-            'Assets/lonelyghost/02-chat.png',
-            'Assets/lonelyghost/og-image.jpg'
           ]
         },
         finalResult: {
@@ -2602,28 +2459,12 @@
             'Multi-Channel Asking: Type, tap the mic, or request a live call the same assistant covers every path.',
             'Brand Fit: Dark, minimal UI with lime accents matches Lonely Ghost’s contemporary fashion identity.',
             'Ongoing Platform: Ready for catalog updates, new intents, and continued refinement of Max’s answers.'
-          ],
-          images: [
-            'Assets/lonelyghost/01-hero.png',
-            'Assets/lonelyghost/02-chat.png',
-            'Assets/lonelyghost/og-image.jpg'
           ]
         }
       },
       '07': {
         name: 'BLAIR&JACK',
         number: '07',
-        heroImage: 'Assets/work-placeholders/07-hero.svg',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/blairandjack/Home_Trio_7.png', alt: 'Blair & Jack product trio' },
-          { type: 'image', src: 'Assets/blairandjack/BJ-Anti-Bump-01.jpg', alt: 'Anti-Bump Treatment' },
-          { type: 'image', src: 'Assets/blairandjack/BJ-Refreshing-Cleanser-01.jpg', alt: 'Refreshing Cleanser' },
-          { type: 'image', src: 'Assets/blairandjack/BJ-Moisterizer-01.jpg', alt: 'Ultra-Hydrating Moisturizer' },
-          { type: 'video', src: 'Assets/blairandjack/vid/01-product.mp4', alt: 'Blair & Jack product film' },
-          { type: 'video', src: 'Video/blairandjack.mp4', alt: 'Blair & Jack site scroll' },
-          { type: 'video', src: 'Assets/blairandjack/vid/03-animation.mp4', alt: 'Blair & Jack product animation' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/blairandjack/',
         video: 'Video/blairandjack.mp4',
         description: 'We designed and developed a physician-backed men\'s skincare site for Blair & Jack built around shaving irritation, razor bumps, and a simple three-step daily ritual.',
@@ -2642,11 +2483,6 @@
             'Initial Brief: Build a complete brand site covering Home, Science, Our Story, and Shop, with clear paths to the Anti-Bump Treatment and the full three-step ritual.',
             'Our Approach: We centered the experience on real skin concerns redness, bumps, barrier care then wrapped science, founders, and product photography into one scroll-driven narrative.',
             'The Opportunity: Position Blair & Jack as the new standard of men\'s skin: physician-backed formulas, a simple ritual, and digital storytelling that earns trust fast.'
-          ],
-          images: [
-            'Assets/blairandjack/Blair_Jack-0185-web.jpg',
-            'Assets/blairandjack/BJ-Content-03.jpg',
-            'Assets/blairandjack/BJ-Anti-Bump-01.jpg'
           ]
         },
         process: {
@@ -2659,11 +2495,6 @@
             'Phase 4: Content & Science - Translated clinical thinking benzoyl peroxide for bumps, hyaluronic hydration, barrier care into plain-language sections and FAQs.',
             'Phase 5: Development - Shipped a responsive marketing site with scroll storytelling, product modules, founder narrative, and clear CTAs into Shop.',
             'Phase 6: Launch - Delivered the live experience at is-studio-hub.github.io/blairandjack/ ready for campaigns and ongoing product storytelling.'
-          ],
-          images: [
-            'Assets/blairandjack/BJ-Refreshing-Cleanser-01.jpg',
-            'Assets/blairandjack/BJ-Moisterizer-01.jpg',
-            'Assets/blairandjack/BJ-Content-04.jpg'
           ]
         },
         assets: {
@@ -2676,12 +2507,6 @@
             'Founder Narrative: Story pages and portraits that connect clinical expertise with lived experience.',
             'Shop Pathways: Clear CTAs into Anti-Bump Treatment and the full ritual without cluttering the brand experience.',
             'Brand System: Wordmark, banners, and layout patterns that keep the site calm, credible, and conversion-ready.'
-          ],
-          images: [
-            'Assets/blairandjack/Home_Trio_7.png',
-            'Assets/blairandjack/BJ-Anti-Bump-03.jpg',
-            'Assets/blairandjack/Blair_Jack-0285-web.jpg',
-            'Assets/blairandjack/B_J-WebBanner-AntiBump-16x9.jpg'
           ]
         },
         finalResult: {
@@ -2694,26 +2519,12 @@
             'Trust Building: Science storytelling, FAQs, and founder credibility that reduce hesitation before purchase.',
             'Motion-Led Brand Feel: Product films and imagery that communicate texture, care, and real-skin results.',
             'Ongoing Partnership: A flexible framework ready for new products, campaigns, and content updates as the brand grows.'
-          ],
-          images: [
-            'Assets/blairandjack/Home_Trio_7.png',
-            'Assets/blairandjack/BJ-Anti-Bump-01.jpg',
-            'Assets/blairandjack/BJ-Refreshing-Cleanser-01.jpg'
           ]
         }
       },
       '08': {
         name: 'SEWER SQUAD',
         number: '08',
-        heroImage: 'Assets/sewersquad/01-hero.png',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/sewersquad/01-hero.png', alt: 'Sewer Squad Robby assistant home' },
-          { type: 'image', src: 'Assets/sewersquad/02-quote.png', alt: 'Sewer Squad quote conversation with Robby' },
-          { type: 'image', src: 'Assets/sewersquad/03-dashboard.png', alt: 'Sewer Squad Robby dashboard' },
-          { type: 'image', src: 'Assets/sewersquad/logo.png', alt: 'Sewer Squad Plumbing & Drains logo' },
-          { type: 'video', src: 'Video/sewersquad.mp4', alt: 'Sewer Squad experience preview' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/theplumber/en',
         video: 'Video/sewersquad.mp4',
         description: 'We designed and developed Robby, an AI assistant for Sewer Squad that handles plumbing emergencies, quotes, and bookings across the GTA, 24/7.',
@@ -2732,11 +2543,6 @@
             'Initial Brief: Create Robby an AI front desk for Sewer Squad covering emergency help, quotes, bookings, and signature services like $88 clear + camera across the GTA.',
             'Our Approach: Design a conversational sheet over a branded character stage, with fast-path buttons for the most common intents and a dashboard that captures every lead automatically.',
             'The Opportunity: Turn after-hours demand into qualified appointments while keeping the brand warm, clear, and trustworthy.'
-          ],
-          images: [
-            'Assets/sewersquad/01-hero.png',
-            'Assets/sewersquad/logo.png',
-            'Assets/sewersquad/02-quote.png'
           ]
         },
         process: {
@@ -2749,11 +2555,6 @@
             'Phase 4: Character Presence - Positioned Robby as a visible plumber character so the experience feels human while AI handles the intake.',
             'Phase 5: Dashboard - Connected chat outcomes to a live ops view conversations, leads, qualified jobs, bookings, and estimated pipeline.',
             'Phase 6: Launch - Shipped the English experience at is-studio-hub.github.io/theplumber/en ready for GTA customers 24/7.'
-          ],
-          images: [
-            'Assets/sewersquad/01-hero.png',
-            'Assets/sewersquad/02-quote.png',
-            'Assets/sewersquad/03-dashboard.png'
           ]
         },
         assets: {
@@ -2766,12 +2567,6 @@
             'Robby Dashboard: Live sync of appointments, contacts, pricing, and leads from every conversation.',
             'Pipeline Metrics: Conversations, leads, qualified, bookings, and estimated pipeline at a glance.',
             'Ops Filters: Views for All, From chat, Bookings, Qualified, and Leads with service and price logged per row.'
-          ],
-          images: [
-            'Assets/sewersquad/01-hero.png',
-            'Assets/sewersquad/02-quote.png',
-            'Assets/sewersquad/03-dashboard.png',
-            'Assets/sewersquad/logo.png'
           ]
         },
         finalResult: {
@@ -2784,25 +2579,12 @@
             'Ops Visibility: Dashboard tracks conversations through bookings with estimated pipeline value.',
             'Brand Fit: Olive-green Sewer Squad identity with a plumber character that feels ready to help.',
             'Always On: Voice and chat keep intake open when the phone line cannot.'
-          ],
-          images: [
-            'Assets/sewersquad/01-hero.png',
-            'Assets/sewersquad/02-quote.png',
-            'Assets/sewersquad/03-dashboard.png'
           ]
         }
       },
       '09': {
         name: 'TEL AVIV',
         number: '09',
-        heroImage: 'Assets/telaviv/01-street.png',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/telaviv/01-street.png', alt: 'Dizengoff 23 interactive 3D house at night' },
-          { type: 'image', src: 'Assets/telaviv/02-roof.png', alt: 'This week on the roofs panel' },
-          { type: 'image', src: 'Assets/telaviv/03-eat.png', alt: 'Restaurants the city is booking panel' },
-          { type: 'video', src: 'Video/telaviv.mp4', alt: 'Tel Aviv Dizengoff 23 preview' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/TelAviv/',
         video: 'Video/telaviv.mp4',
         description: 'We designed and developed Dizengoff 23, an interactive 3D house that turns this week in Tel Aviv into a place you can explore roof parties, transit, restaurants, parking, and more.',
@@ -2821,11 +2603,6 @@
             'Initial Brief: Create an interactive 3D house with clickable hotspots for roof parties, rides, restaurants, parking, and trash, plus a street overview that invites exploration.',
             'Our Approach: Model a recognizable Bauhaus house, light it for night in Tel Aviv, and attach dated content panels that refresh with the week.',
             'The Opportunity: Turn practical city intel into a memorable place people want to drag, click, and revisit every Sunday.'
-          ],
-          images: [
-            'Assets/telaviv/01-street.png',
-            'Assets/telaviv/02-roof.png',
-            'Assets/telaviv/03-eat.png'
           ]
         },
         process: {
@@ -2838,11 +2615,6 @@
             'Phase 4: Weekly Panels - Structured dated listings roof parties, restaurant picks, and practical city notes for the current week window.',
             'Phase 5: Interaction - Added drag-to-look, hotspot clicks, loader with start, and day/night cycle labeling.',
             'Phase 6: Launch - Shipped the live experience at is-studio-hub.github.io/TelAviv/ ready for Sunday refreshes.'
-          ],
-          images: [
-            'Assets/telaviv/01-street.png',
-            'Assets/telaviv/02-roof.png',
-            'Assets/telaviv/03-eat.png'
           ]
         },
         assets: {
@@ -2855,11 +2627,6 @@
             'Eat Panel: Audience-ranked restaurants for the week with short local descriptions.',
             'HUD & Credits: Dizengoff 23 branding, week range, and live time-of-day label.',
             'Loader: Arriving in Tel Aviv progress with a clear START into the scene.'
-          ],
-          images: [
-            'Assets/telaviv/01-street.png',
-            'Assets/telaviv/02-roof.png',
-            'Assets/telaviv/03-eat.png'
           ]
         },
         finalResult: {
@@ -2872,25 +2639,12 @@
             'Local Texture: Bauhaus form, night sky, and Dizengoff details make the guide feel placed not templated.',
             'Playful Utility: City tips for parties, tables, and practical street life without a dry directory UI.',
             'Shareable Moment: A scene people want to send friends before a weekend in Tel Aviv.'
-          ],
-          images: [
-            'Assets/telaviv/01-street.png',
-            'Assets/telaviv/02-roof.png',
-            'Assets/telaviv/03-eat.png'
           ]
         }
       },
       '10': {
         name: 'DOOOGS',
         number: '10',
-        heroImage: 'Assets/dooogs/01-home.png',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/dooogs/01-home.png', alt: 'Dooogs chat home with suggestions' },
-          { type: 'image', src: 'Assets/dooogs/02-poodles.png', alt: 'Dooogs poodle character and breed guide' },
-          { type: 'image', src: 'Assets/dooogs/logo.png', alt: 'Dooogs brand mark' },
-          { type: 'video', src: 'Video/dooogs.mp4', alt: 'Dooogs experience preview' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/dooogs/en',
         video: 'Video/dooogs.mp4',
         description: 'We designed and developed Dooogs!, a conversational poodle guide that helps people explore dog breeds, traits, history, and care through chat and voice.',
@@ -2909,11 +2663,6 @@
             'Initial Brief: Create a conversational experience hosted by Dooogs! covering types, history, care, and where to learn more with chat and voice.',
             'Our Approach: Pair a character stage with a slide-up ask sheet, prompt chips for common questions, and threaded follow-ups that remember context.',
             'The Opportunity: Make breed education feel playful enough to explore and practical enough to trust.'
-          ],
-          images: [
-            'Assets/dooogs/01-home.png',
-            'Assets/dooogs/logo.png',
-            'Assets/dooogs/02-poodles.png'
           ]
         },
         process: {
@@ -2926,11 +2675,6 @@
             'Phase 4: Character Stage - Positioned the Dooogs! character so answers feel hosted, not anonymous.',
             'Phase 5: Follow-ups - Added thread memory with next actions like Tell me more, Another breed, and Training tips.',
             'Phase 6: Launch - Shipped the English experience at is-studio-hub.github.io/dooogs/en.'
-          ],
-          images: [
-            'Assets/dooogs/01-home.png',
-            'Assets/dooogs/02-poodles.png',
-            'Assets/dooogs/logo.png'
           ]
         },
         assets: {
@@ -2943,11 +2687,6 @@
             'Follow-up Actions: Tell me more, Another breed, and Training tips to keep exploring.',
             'Brand Mark: Dachshund silhouette and Dooogs! naming throughout the header.',
             'Sound Controls: Voice and ambient toggles for a fuller assistant feel.'
-          ],
-          images: [
-            'Assets/dooogs/01-home.png',
-            'Assets/dooogs/02-poodles.png',
-            'Assets/dooogs/logo.png'
           ]
         },
         finalResult: {
@@ -2960,25 +2699,12 @@
             'Hosted Presence: A character-led stage that makes learning feel friendly.',
             'Threaded Depth: Follow-ups continue the conversation instead of resetting to search.',
             'Brand Clarity: Minimal black-and-white Dooogs! identity that stays playful and sharp.'
-          ],
-          images: [
-            'Assets/dooogs/01-home.png',
-            'Assets/dooogs/02-poodles.png',
-            'Assets/dooogs/logo.png'
           ]
         }
       },
       '11': {
         name: 'AVA',
         number: '11',
-        heroImage: 'Assets/ava/01-home.png',
-        heroLayout: 'stack-split',
-        heroMedia: [
-          { type: 'image', src: 'Assets/ava/01-home.png', alt: 'Ava kinetic typography homepage with letter field' },
-          { type: 'image', src: 'Assets/ava/02-studio.png', alt: 'Ava studio letter field artboard' },
-          { type: 'image', src: 'Assets/ava/logo.png', alt: 'Ava brand mark' },
-          { type: 'video', src: 'Video/ava.mp4', alt: 'Ava experience preview' }
-        ],
         liveSiteUrl: 'https://is-studio-hub.github.io/ava/',
         video: 'Video/ava.mp4',
         description: 'We designed and developed Ava, a kinetic typography studio that forms letters, words, or images from dense glyph fields you can animate, save, embed, and export.',
@@ -2997,11 +2723,6 @@
             'Initial Brief: Ship a studio that forms letters, words, or images from glyph fields, with save, embed, and multi-resolution video export.',
             'Our Approach: Pair a marketing home with an interactive letter-field preview and a full Studio for shaping, lighting, and animation.',
             'The Opportunity: Turn experimental type motion into a repeatable product with Free, Pro, Business, and Enterprise plans.'
-          ],
-          images: [
-            'Assets/ava/01-home.png',
-            'Assets/ava/logo.png',
-            'Assets/ava/02-studio.png'
           ]
         },
         process: {
@@ -3014,11 +2735,6 @@
             'Phase 4: Motion System - Wave, drift, shake, pointer spin, pulse, twinkle, ripple, and bubble across the full field.',
             'Phase 5: Library & Export - Saves, iframe embeds, and 4K / 1080p / 720p / web video download.',
             'Phase 6: Launch - Shipped Ava at is-studio-hub.github.io/ava with Free through Enterprise plans.'
-          ],
-          images: [
-            'Assets/ava/01-home.png',
-            'Assets/ava/02-studio.png',
-            'Assets/ava/03-how.png'
           ]
         },
         assets: {
@@ -3031,12 +2747,6 @@
             'Plans: Free, Pro, Business, and Enterprise tiers tied to saves and export quality.',
             'Brand Mark: Ava wordmark with Letter Field lockup.',
             'Embed Path: Library saves that stay live only while the save exists.'
-          ],
-          images: [
-            'Assets/ava/01-home.png',
-            'Assets/ava/02-studio.png',
-            'Assets/ava/04-plans.png',
-            'Assets/ava/logo.png'
           ]
         },
         finalResult: {
@@ -3049,172 +2759,11 @@
             'Library Pipeline: Save, embed, and download multi-resolution video.',
             'Product Plans: Free trials through Pro, Business, and Enterprise scale.',
             'Brand Clarity: Dark, serif-led Ava identity that stays sharp and typographic.'
-          ],
-          images: [
-            'Assets/ava/01-home.png',
-            'Assets/ava/02-studio.png',
-            'Assets/ava/04-plans.png',
-            'Assets/ava/logo.png'
           ]
         }
       }
     };
-    const SITE_MEDIA = {
-      '01': [
-        { type: 'video', src: 'Video/gatorade.mp4', alt: 'Gatorade site video' },
-        { type: 'image', src: 'Assets/site-shots/01/01-hero.jpg', alt: 'Gatorade site hero' },
-        { type: 'image', src: 'Assets/site-shots/01/02-mid.jpg', alt: 'Gatorade site mid section' },
-        { type: 'image', src: 'Assets/site-shots/01/03-lower.jpg', alt: 'Gatorade site lower section' }
-      ],
-      '02': [
-        { type: 'video', src: 'Video/magicspoon.mp4', alt: 'Magic Spoon site video' },
-        { type: 'image', src: 'Assets/site-shots/02/01-hero.jpg', alt: 'Magic Spoon site hero' },
-        { type: 'image', src: 'Assets/site-shots/02/02-mid.jpg', alt: 'Magic Spoon site mid section' },
-        { type: 'image', src: 'Assets/site-shots/02/03-lower.jpg', alt: 'Magic Spoon site lower section' }
-      ],
-      '03': [
-        { type: 'video', src: 'Video/ozint.mp4', alt: 'Ozint site video' },
-        { type: 'image', src: 'Assets/site-shots/03/01-hero.jpg', alt: 'Ozint site hero' },
-        { type: 'image', src: 'Assets/site-shots/03/02-mid.jpg', alt: 'Ozint site mid section' },
-        { type: 'image', src: 'Assets/site-shots/03/03-lower.jpg', alt: 'Ozint site lower section' },
-        { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693c89b718f2df1b25d6abf5_12.png', alt: 'Ozint security intelligence' },
-        { type: 'image', src: 'https://cdn.prod.website-files.com/693b41b8c309d6de772cf4e2/693b41b8c309d6de772cf626_Executive%20Protection.png', alt: 'Ozint executive protection' },
-        { type: 'youtube', src: 'https://www.youtube.com/embed/w7Set1ad2pc?autoplay=1&mute=1&loop=1&playlist=w7Set1ad2pc&controls=0&modestbranding=1&playsinline=1&rel=0', alt: 'Ozint security video' },
-        { type: 'youtube', src: 'https://www.youtube.com/embed/NSvsTcZ8bX4?autoplay=1&mute=1&loop=1&playlist=NSvsTcZ8bX4&controls=0&modestbranding=1&playsinline=1&rel=0', alt: 'Ozint security video 2' }
-      ],
-      '04': [
-        { type: 'video', src: 'Video/superlocal.mp4', alt: 'Superlocal site video' },
-        { type: 'image', src: 'Assets/site-shots/04/01-hero.jpg', alt: 'Superlocal site hero' },
-        { type: 'image', src: 'Assets/site-shots/04/02-mid.jpg', alt: 'Superlocal site mid section' },
-        { type: 'image', src: 'Assets/site-shots/04/03-lower.jpg', alt: 'Superlocal site lower section' }
-      ],
-      '05': [
-        { type: 'video', src: 'Video/dahari.mp4', alt: 'Dahari site video' },
-        { type: 'image', src: 'Assets/site-shots/05/01-hero.jpg', alt: 'Dahari site hero' },
-        { type: 'image', src: 'Assets/site-shots/05/02-mid.jpg', alt: 'Dahari site mid section' },
-        { type: 'image', src: 'Assets/site-shots/05/03-lower.jpg', alt: 'Dahari site lower section' }
-      ],
-      '06': [
-        { type: 'video', src: 'Video/lonelyghost.mp4', alt: 'Lonely Ghost experience preview' },
-        { type: 'image', src: 'Assets/lonelyghost/01-hero.png', alt: 'Lonely Ghost assistant with Max' },
-        { type: 'image', src: 'Assets/lonelyghost/02-chat.png', alt: 'Lonely Ghost chat with Max' },
-        { type: 'image', src: 'Assets/lonelyghost/og-image.jpg', alt: 'Lonely Ghost social preview' },
-        { type: 'image', src: 'Assets/site-shots/06/01-hero.jpg', alt: 'Lonely Ghost site hero' },
-        { type: 'image', src: 'Assets/site-shots/06/02-mid.jpg', alt: 'Lonely Ghost site mid section' },
-        { type: 'image', src: 'Assets/site-shots/06/03-lower.jpg', alt: 'Lonely Ghost site lower section' }
-      ],
-      '07': [
-        { type: 'video', src: 'Video/blairandjack.mp4', alt: 'Blair & Jack site video' },
-        { type: 'image', src: 'Assets/blairandjack/Home_Trio_7.png', alt: 'Blair & Jack product trio' },
-        { type: 'image', src: 'Assets/blairandjack/BJ-Anti-Bump-01.jpg', alt: 'Anti-Bump Treatment' },
-        { type: 'image', src: 'Assets/blairandjack/BJ-Refreshing-Cleanser-01.jpg', alt: 'Refreshing Cleanser' },
-        { type: 'image', src: 'Assets/blairandjack/BJ-Moisterizer-01.jpg', alt: 'Ultra-Hydrating Moisturizer' },
-        { type: 'video', src: 'Assets/blairandjack/vid/01-product.mp4', alt: 'Blair & Jack product film' },
-        { type: 'video', src: 'Assets/blairandjack/vid/02-cuts.mp4', alt: 'Blair & Jack product cuts' }
-      ],
-      '08': [
-        { type: 'video', src: 'Video/sewersquad.mp4', alt: 'Sewer Squad experience preview' },
-        { type: 'image', src: 'Assets/sewersquad/01-hero.png', alt: 'Sewer Squad Robby assistant' },
-        { type: 'image', src: 'Assets/sewersquad/02-quote.png', alt: 'Sewer Squad quote flow' },
-        { type: 'image', src: 'Assets/sewersquad/03-dashboard.png', alt: 'Sewer Squad Robby dashboard' },
-        { type: 'image', src: 'Assets/sewersquad/logo.png', alt: 'Sewer Squad logo' },
-        { type: 'image', src: 'Assets/site-shots/08/01-hero.jpg', alt: 'Sewer Squad site hero' },
-        { type: 'image', src: 'Assets/site-shots/08/02-mid.jpg', alt: 'Sewer Squad site mid section' },
-        { type: 'image', src: 'Assets/site-shots/08/03-lower.jpg', alt: 'Sewer Squad dashboard' }
-      ],
-      '09': [
-        { type: 'video', src: 'Video/telaviv.mp4', alt: 'Tel Aviv Dizengoff 23 preview' },
-        { type: 'image', src: 'Assets/telaviv/01-street.png', alt: 'Dizengoff 23 street view' },
-        { type: 'image', src: 'Assets/telaviv/02-roof.png', alt: 'Tel Aviv roof parties' },
-        { type: 'image', src: 'Assets/telaviv/03-eat.png', alt: 'Tel Aviv restaurants this week' },
-        { type: 'image', src: 'Assets/site-shots/09/01-hero.jpg', alt: 'Tel Aviv site hero' },
-        { type: 'image', src: 'Assets/site-shots/09/02-mid.jpg', alt: 'Tel Aviv site mid section' },
-        { type: 'image', src: 'Assets/site-shots/09/03-lower.jpg', alt: 'Tel Aviv site lower section' }
-      ],
-      '10': [
-        { type: 'video', src: 'Video/dooogs.mp4', alt: 'Dooogs experience preview' },
-        { type: 'image', src: 'Assets/dooogs/01-home.png', alt: 'Dooogs chat home' },
-        { type: 'image', src: 'Assets/dooogs/02-poodles.png', alt: 'Dooogs breed guide' },
-        { type: 'image', src: 'Assets/dooogs/logo.png', alt: 'Dooogs logo' },
-        { type: 'image', src: 'Assets/site-shots/10/01-hero.jpg', alt: 'Dooogs site hero' },
-        { type: 'image', src: 'Assets/site-shots/10/02-mid.jpg', alt: 'Dooogs site mid section' },
-        { type: 'image', src: 'Assets/site-shots/10/03-lower.jpg', alt: 'Dooogs site lower section' }
-      ],
-      '11': [
-        { type: 'video', src: 'Video/ava.mp4', alt: 'Ava experience preview' },
-        { type: 'image', src: 'Assets/ava/01-home.png', alt: 'Ava homepage letter field' },
-        { type: 'image', src: 'Assets/ava/02-studio.png', alt: 'Ava studio' },
-        { type: 'image', src: 'Assets/ava/03-how.png', alt: 'Ava how it works' },
-        { type: 'image', src: 'Assets/ava/04-plans.png', alt: 'Ava plans' },
-        { type: 'image', src: 'Assets/ava/logo.png', alt: 'Ava logo' },
-        { type: 'image', src: 'Assets/site-shots/11/01-hero.jpg', alt: 'Ava site hero' },
-        { type: 'image', src: 'Assets/site-shots/11/02-mid.jpg', alt: 'Ava site mid section' },
-        { type: 'image', src: 'Assets/site-shots/11/03-lower.jpg', alt: 'Ava site lower section' }
-      ]
-    };
-    function normalizeMediaItem(item, fallbackAlt) {
-      if (!item) return null;
-      if (typeof item === 'string') {
-        const src = item;
-        const isVideo = /\.(mp4|mov|webm)(\?|$)/i.test(src);
-        const isYoutube = /youtube\.com\/embed/i.test(src);
-        return {
-          type: isYoutube ? 'youtube' : (isVideo ? 'video' : 'image'),
-          src,
-          alt: fallbackAlt || 'Site media'
-        };
-      }
-      if (!item.src) return null;
-      let type = item.type;
-      if (!type) {
-        if (/youtube\.com\/embed/i.test(item.src)) type = 'youtube';
-        else if (/\.(mp4|mov|webm)(\?|$)/i.test(item.src)) type = 'video';
-        else type = 'image';
-      }
-      // Prefer portable local video paths over absolute machine paths
-      let src = item.src;
-      if (/^\/Users\//.test(src) || /CuttingEdgeSites/.test(src)) {
-        return null;
-      }
-      if (/Peppers\//.test(src)) return null;
-      if (/Screen Recording/.test(src) && !src.startsWith('Video/gatorade') && !src.startsWith('Video/magic') && !src.startsWith('Video/ozint') && !src.startsWith('Video/super') && !src.startsWith('Video/dahari') && !src.startsWith('Video/lonelyghost') && !src.startsWith('Video/sewersquad') && !src.startsWith('Video/telaviv') && !src.startsWith('Video/dooogs') && !src.startsWith('Video/ava') && !src.startsWith('Video/sorry')) {
-        return null;
-      }
-      return { type, src, alt: item.alt || fallbackAlt || 'Site media' };
-    }
-
-    function collectDrawerMedia(project) {
-      const seen = new Set();
-      const items = [];
-
-      const add = (raw) => {
-        const item = normalizeMediaItem(raw, project.name);
-        if (!item || !item.src || seen.has(item.src)) return;
-        seen.add(item.src);
-        items.push(item);
-      };
-
-      const configured = (project.siteMedia && project.siteMedia.length)
-        ? project.siteMedia
-        : (SITE_MEDIA[project.number] || []);
-      configured.forEach(add);
-
-      // Extra real-site media from project sections (skip stock placeholders)
-      ['howItStarted', 'process', 'assets', 'finalResult'].forEach((key) => {
-        const section = project[key];
-        if (!section || !section.media) return;
-        section.media.forEach((item) => {
-          if (!item || !item.src) return;
-          if (/unsplash\.com|via\.placeholder/i.test(item.src)) return;
-          if (/^https?:\/\//i.test(item.src) || item.src.startsWith('Video/') || item.src.startsWith('Assets/')) {
-            add(item);
-          }
-        });
-      });
-
-      return items;
-    }
-
+    
     // Get project ID from URL (set by work.html when user clicks a project title)
     // Example: work.html links to "project.html?project=01" for GATORADE
     // This matches the data-video attribute from work.html's project-item
@@ -3313,38 +2862,15 @@
     }
 
     function renderDrawerSiteImages(project) {
-      const media = collectDrawerMedia(project);
-      if (!media.length) return '';
-
-      const figures = media.map((item, index) => {
-        const alt = escapeDrawerHtml(item.alt || `${project.name} media ${index + 1}`);
-        const src = escapeDrawerHtml(item.src);
-
-        if (item.type === 'youtube') {
-          return `
-            <figure class="details-drawer__image">
-              <iframe src="${src}" title="${alt}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-            </figure>
-          `;
-        }
-
-        if (item.type === 'video') {
-          return `
-            <figure class="details-drawer__image">
-              <video autoplay muted loop playsinline preload="metadata" aria-label="${alt}">
-                <source src="${src}" type="video/mp4">
-              </video>
-            </figure>
-          `;
-        }
-
+      const figures = [1, 2, 3, 4].map((n) => {
+        const src = `Assets/site-shots/${project.number}/0${n}.jpg`;
+        const alt = escapeDrawerHtml(`${project.name} site image ${n}`);
         return `
           <figure class="details-drawer__image">
-            <img src="${src}" alt="${alt}" loading="lazy" decoding="async" />
+            <img src="${src}" alt="${alt}" decoding="async" />
           </figure>
         `;
       }).join('');
-
       return `<div class="details-drawer__images">${figures}</div>`;
     }
 
@@ -3387,7 +2913,7 @@
       push('process', 'Process Highlights', renderDrawerList(getDrawerProcess(project)));
       push('deliverables', 'Key Deliverables', renderDrawerList(getDrawerDeliverables(project)));
       push('outcomes', 'Impact & Outcomes', renderDrawerList(getDrawerOutcomes(project)));
-      push('site-images', 'Images & Video', renderDrawerSiteImages(project));
+      push('site-images', 'Site Images', renderDrawerSiteImages(project));
 
       const tagline = project.tagline
         ? `<p class="details-drawer__tagline">${escapeDrawerHtml(project.tagline)}</p>`
@@ -3483,56 +3009,6 @@
 
     initDetailsDrawer();
 
-    // Helper function to generate single large image HTML from media array (only first item)
-    const generateGallery = (mediaArray, altText) => {
-      // Use placeholder if no media array or empty
-      const placeholderImage = 'https://via.placeholder.com/1200x800/863B19/F7E491?text=Project+Image';
-      
-      // Get first item or use placeholder
-      let item = null;
-      if (mediaArray && mediaArray.length > 0) {
-        item = mediaArray[0];
-      } else {
-        item = { type: 'image', src: placeholderImage, alt: altText || 'Project image' };
-      }
-      
-      return `
-        <div class="gallery">
-          ${(() => {
-            // Handle YouTube videos
-            if (item.type === 'youtube' || (item.src && item.src.includes('youtube.com/embed'))) {
-              return `
-                <div class="gallery-item">
-                  <iframe src="${encodeURI(item.src)}" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              `;
-            } 
-            // Handle local video files (will loop automatically)
-            else if (item.type === 'video' || (item.src && (item.src.endsWith('.mp4') || item.src.endsWith('.mov') || item.src.endsWith('.webm')))) {
-              return `
-                <div class="gallery-item">
-                  <video autoplay loop muted playsinline preload="auto">
-                    <source src="${encodeURI(item.src)}" type="video/mp4">
-                    <source src="${encodeURI(item.src)}" type="video/quicktime">
-                    <source src="${encodeURI(item.src)}" type="video/webm">
-                  </video>
-                </div>
-              `;
-            } 
-            // Handle images and GIFs (GIFs loop automatically by nature)
-            else {
-              const isGif = item.src && (item.src.toLowerCase().endsWith('.gif') || item.src.toLowerCase().includes('.gif'));
-              return `
-                <div class="gallery-item">
-                  <img src="${encodeURI(item.src)}" alt="${item.alt || altText || 'Project image'}" loading="lazy" ${isGif ? 'class="gif-image"' : ''} />
-                </div>
-              `;
-            }
-          })()}
-        </div>
-      `;
-    };
-
     function resolveLiveEmbedUrl(project) {
       if (project.liveEmbedUrl) return project.liveEmbedUrl;
       if (project.liveEmbedPath) {
@@ -3541,87 +3017,9 @@
       return project.liveSiteUrl;
     }
 
-    function resolveHeroImage(project) {
-      if (project.heroImage) return project.heroImage;
-      const n = project.number || '01';
-      return `Assets/work-placeholders/${n}-hero.svg`;
-    }
-
-    function getHeroMedia(project) {
-      if (project.heroMedia && project.heroMedia.length) {
-        return project.heroLayout === 'stack-split' ? project.heroMedia.slice(0, 7) : project.heroMedia.slice(0, 4);
-      }
-      const n = project.number || '01';
-      const fromSite = (SITE_MEDIA[n] || []).filter((item) => {
-        if (!item || !item.src) return false;
-        if (item.type === 'youtube') return false;
-        if (item.type === 'video' || item.type === 'image') return true;
-        return /\.(mp4|mov|webm|jpe?g|png|webp|gif|svg)(\?|$)/i.test(item.src);
-      });
-      const items = fromSite.slice(0, 4);
-      while (items.length < 4) {
-        items.push({
-          type: 'image',
-          src: `Assets/work-placeholders/${n}-hero.svg`,
-          alt: project.name + ' placeholder'
-        });
-      }
-      return items;
-    }
-
-    function generateHeroGrid(project) {
-      const layout = project.heroLayout || 'asymmetric';
-      let media = getHeroMedia(project);
-
-      if (layout === 'stack-split') {
-        // Prefer explicit media: first images (up to 4) left, videos (up to 3) right
-        const images = media.filter((item) => item.type === 'image' || /\.(jpe?g|png|webp|gif|svg)(\?|$)/i.test(item.src || '')).slice(0, 4);
-        const videos = media.filter((item) => item.type === 'video' || /\.(mp4|mov|webm)(\?|$)/i.test(item.src || '')).slice(0, 3);
-        while (images.length < 4) {
-          images.push({ type: 'image', src: resolveHeroImage(project), alt: project.name + ' placeholder' });
-        }
-        while (videos.length < 3) {
-          videos.push(videos[videos.length - 1] || { type: 'image', src: resolveHeroImage(project), alt: project.name });
-        }
-
-        const renderCell = (item, index, side) => {
-          const alt = (item.alt || (project.name + ' media')).replace(/"/g, '&quot;');
-          const isVideo = item.type === 'video' || /\.(mp4|mov|webm)(\?|$)/i.test(item.src || '');
-          const mediaHtml = isVideo
-            ? `<video src="${item.src}" muted autoplay loop playsinline preload="metadata" aria-label="${alt}"></video>`
-            : `<img class="examples__hero-img" src="${item.src}" alt="${alt}" loading="${index < 2 ? 'eager' : 'lazy'}" decoding="async" />`;
-          return `<div class="examples__hero-cell examples__hero-cell--${side}" data-hero-index="${index}">${mediaHtml}</div>`;
-        };
-
-        const left = images.map((item, i) => renderCell(item, i, 'image')).join('');
-        const right = videos.map((item, i) => renderCell(item, i, 'video')).join('');
-        return `<div class="examples__hero-grid examples__hero-grid--stack-split" aria-label="${(project.name + ' media grid').replace(/"/g, '&quot;')}">${left}${right}</div>`;
-      }
-
-      // Default asymmetric 2-row grid (4 cells)
-      media = media.slice(0, 4);
-      while (media.length < 4) {
-        media.push({ type: 'image', src: resolveHeroImage(project), alt: project.name + ' placeholder' });
-      }
-      const cells = media.map((item, index) => {
-        const alt = (item.alt || (project.name + ' media ' + (index + 1))).replace(/"/g, '&quot;');
-        const isVideo = item.type === 'video' || /\.(mp4|mov|webm)(\?|$)/i.test(item.src || '');
-        if (isVideo) {
-          return `
-            <div class="examples__hero-cell" data-hero-index="${index}">
-              <video src="${item.src}" muted autoplay loop playsinline preload="metadata" aria-label="${alt}"></video>
-            </div>`;
-        }
-        return `
-          <div class="examples__hero-cell" data-hero-index="${index}">
-            <img class="examples__hero-img" src="${item.src}" alt="${alt}" loading="${index < 2 ? 'eager' : 'lazy'}" decoding="async" />
-          </div>`;
-      }).join('');
-      return `<div class="examples__hero-grid" aria-label="${(project.name + ' media grid').replace(/"/g, '&quot;')}">${cells}</div>`;
-    }
-
     function generateHeroImage(project) {
-      return generateHeroGrid(project);
+      const alt = (project.name + ' video').replace(/"/g, '&quot;');
+      return `<div class="examples__hero-video"><video src="${encodeURI(project.video)}" muted autoplay loop playsinline preload="auto" aria-label="${alt}"></video></div>`;
     }
 
     function hideIframeScrollbars(iframe) {
@@ -3698,26 +3096,10 @@
       document.head.appendChild(script);
     }
 
-    function generateSectionGallery(project, section) {
-      if (project.liveSiteUrl) return '';
-      const data = project[section];
-      if (!data) return '';
-      if (data.media && data.media.length > 0) {
-        return generateGallery(data.media, data.title);
-      }
-      if (data.images && data.images.length > 0) {
-        return generateGallery(
-          data.images.map((img) => ({ type: 'image', src: img, alt: data.title })),
-          data.title
-        );
-      }
-      return '';
-    }
-
     // Load project content
     const contentEl = document.getElementById('projectContent');
     if (contentEl && project) {
-      document.body.classList.toggle('project-page--live', !!(project.liveSiteUrl || project.heroImage));
+      document.body.classList.toggle('project-page--live', true);
       document.body.classList.toggle('project-theme--gatorade', projectId === '01');
 
       contentEl.innerHTML = `
@@ -3725,27 +3107,10 @@
         <section class="examples-section" id="examples">
           <div class="examples__grid">
             <!-- LEFT COLUMN (sticky items) -->
-            <div class="examples__left${(project.liveSiteUrl || project.heroImage) ? ' examples__left--embed' : ''}">
-              ${(project.liveSiteUrl || project.heroImage) ? `
+            <div class="examples__left examples__left--embed">
               <div class="examples__hero examples__live-site">
                 ${generateHeroImage(project)}
               </div>
-              ` : `
-              <div class="examples__collection">
-                <div class="examples__item" data-item-index="0">
-                  <div class="examples__item-content">${generateSectionGallery(project, 'howItStarted')}</div>
-                </div>
-                <div class="examples__item" data-item-index="1">
-                  <div class="examples__item-content">${generateSectionGallery(project, 'process')}</div>
-                </div>
-                <div class="examples__item" data-item-index="2">
-                  <div class="examples__item-content">${generateSectionGallery(project, 'assets')}</div>
-                </div>
-                <div class="examples__item" data-item-index="3">
-                  <div class="examples__item-content">${generateSectionGallery(project, 'finalResult')}</div>
-                </div>
-              </div>
-              `}
             </div>
 
             <!-- RIGHT COLUMN -->
@@ -3758,7 +3123,7 @@
               </div>
               <div class="project-actions">
                 <a href="${project.liveSiteUrl || '#'}" class="project-view-button"${project.liveSiteUrl ? ' target="_blank" rel="noopener noreferrer"' : ''}>View the Result</a>
-                <button type="button" class="project-details-button" data-details-drawer-open>God Is in the Small Details</button>
+                <button type="button" class="project-details-button" data-details-drawer-open>More Details</button>
               </div>
             </div>
             </div>
