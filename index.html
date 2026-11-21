@@ -301,7 +301,7 @@
         top: auto;
         left: clamp(12px, 2.4vw, 48px);
         right: clamp(12px, 2.4vw, 48px);
-        bottom: calc(clamp(14px, 2.2vh, 28px) + 48px + 36px);
+        bottom: calc(clamp(14px, 2.2vh, 28px) + 48px + 36px + 32px + env(safe-area-inset-bottom, 0px));
         width: auto;
         display: block;
         align-items: start;
@@ -318,6 +318,10 @@
       }
       .center .embed-wrap {
         display: none !important;
+      }
+      /* extra breathing room at the bottom on mobile */
+      .bottom-left {
+        bottom: calc(clamp(14px, 2.2vh, 28px) + 32px + env(safe-area-inset-bottom, 0px));
       }
     }
 
