@@ -16,7 +16,7 @@ Novifaro is a Toronto, Ontario, Canada studio for brand strategy, digital produc
 ## Site
 
 - [Home](https://novifaro.ca/): Novifaro Experience House
-- [About](https://novifaro.ca/About.html): Mission, values, and studio story
+- [About](https://novifaro.ca/About.html): Digital growth agency in Toronto: values, digital marketing, SEO, web design and development, and AI systems
 - [Work](https://novifaro.ca/work.html): Campaign sites, products, and digital experiences
 - [Contact](https://novifaro.ca/contact.html): Start a project
 - [Privacy — Sentinel](https://novifaro.ca/privacy-sentinel.html): Sentinel product privacy policy
