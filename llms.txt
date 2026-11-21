@@ -18,5 +18,15 @@ Novifaro is a Toronto, Ontario, Canada studio for brand strategy, digital produc
 - [Home](https://novifaro.ca/): Novifaro Experience House
 - [About](https://novifaro.ca/About.html): Digital growth agency in Toronto: values, digital marketing, SEO, web design and development, and AI systems
 - [Work](https://novifaro.ca/work.html): Campaign sites, products, and digital experiences
+- [Blog](https://novifaro.ca/blog.html): Guides on digital marketing, SEO, GEO, web design, and AI systems
 - [Contact](https://novifaro.ca/contact.html): Start a project
 - [Privacy — Sentinel](https://novifaro.ca/privacy-sentinel.html): Sentinel product privacy policy
+
+## Blog articles
+
+- [What Is Generative Engine Optimization (GEO)?](https://novifaro.ca/blog/what-is-generative-engine-optimization-geo.html): GEO explained: how to make your business visible in ChatGPT, Google AI Overviews, Perplexity, and Claude, with a practical 8-step checklist.
+- [Small Business SEO Checklist for Toronto and Canada](https://novifaro.ca/blog/small-business-seo-checklist-toronto.html): A practical SEO checklist for small businesses in Toronto and across Canada: technical basics, service pages, local SEO, Google Business Profile, and monthly tracking.
+- [Website Design That Converts: 10 Must-Have Elements](https://novifaro.ca/blog/website-design-that-converts.html): What makes a website convert visitors into customers: clear messaging, fast load times, strong calls to action, trust signals, simple forms, and ongoing testing.
+- [AI Automation for Small Business: 7 Use Cases](https://novifaro.ca/blog/ai-automation-for-small-business.html): Seven practical ways small businesses use AI systems and automation to save time, answer customers faster, and grow, plus a safe step-by-step plan to get started.
+- [Digital Marketing Strategy: A 90-Day Plan](https://novifaro.ca/blog/digital-marketing-strategy-90-day-plan.html): A simple 90-day digital marketing plan for small businesses: set goals, fix your foundation, launch SEO, content, email and ads, then measure and scale what works.
+- [How to Measure Digital Marketing ROI](https://novifaro.ca/blog/measure-digital-marketing-roi.html): Learn how to calculate digital marketing ROI, which KPIs to track (CAC, conversion rate, ROAS, LTV), and how to set up GA4, UTM tracking, and a simple monthly report.

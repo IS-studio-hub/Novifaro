@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Novifaro Blog</title>
+    <link>https://novifaro.ca/blog.html</link>
+    <description>Digital marketing, SEO, web design, and AI systems insights from Novifaro in Toronto.</description>
+    <language>en-ca</language>
+    <item>
+      <title>What Is Generative Engine Optimization (GEO)? How to Get Your Business Cited by AI</title>
+      <link>https://novifaro.ca/blog/what-is-generative-engine-optimization-geo.html</link>
+      <guid>https://novifaro.ca/blog/what-is-generative-engine-optimization-geo.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>AI Search</category>
+      <description>GEO explained: how to make your business visible in ChatGPT, Google AI Overviews, Perplexity, and Claude, with a practical 8-step checklist.</description>
+    </item>
+    <item>
+      <title>Small Business SEO Checklist for Toronto and Canada (2026)</title>
+      <link>https://novifaro.ca/blog/small-business-seo-checklist-toronto.html</link>
+      <guid>https://novifaro.ca/blog/small-business-seo-checklist-toronto.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>SEO</category>
+      <description>A practical SEO checklist for small businesses in Toronto and across Canada: technical basics, service pages, local SEO, Google Business Profile, and monthly tracking.</description>
+    </item>
+    <item>
+      <title>Website Design That Converts: 10 Elements Every Business Website Needs</title>
+      <link>https://novifaro.ca/blog/website-design-that-converts.html</link>
+      <guid>https://novifaro.ca/blog/website-design-that-converts.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>Web Design</category>
+      <description>What makes a website convert visitors into customers: clear messaging, fast load times, strong calls to action, trust signals, simple forms, and ongoing testing.</description>
+    </item>
+    <item>
+      <title>AI Automation for Small Business: 7 Practical Use Cases and How to Start</title>
+      <link>https://novifaro.ca/blog/ai-automation-for-small-business.html</link>
+      <guid>https://novifaro.ca/blog/ai-automation-for-small-business.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>AI Systems</category>
+      <description>Seven practical ways small businesses use AI systems and automation to save time, answer customers faster, and grow, plus a safe step-by-step plan to get started.</description>
+    </item>
+    <item>
+      <title>Digital Marketing Strategy for Small Business: A 90-Day Plan</title>
+      <link>https://novifaro.ca/blog/digital-marketing-strategy-90-day-plan.html</link>
+      <guid>https://novifaro.ca/blog/digital-marketing-strategy-90-day-plan.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>Digital Marketing</category>
+      <description>A simple 90-day digital marketing plan for small businesses: set goals, fix your foundation, launch SEO, content, email and ads, then measure and scale what works.</description>
+    </item>
+    <item>
+      <title>How to Measure Digital Marketing ROI: The KPIs That Actually Matter</title>
+      <link>https://novifaro.ca/blog/measure-digital-marketing-roi.html</link>
+      <guid>https://novifaro.ca/blog/measure-digital-marketing-roi.html</guid>
+      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <category>Analytics</category>
+      <description>Learn how to calculate digital marketing ROI, which KPIs to track (CAC, conversion rate, ROAS, LTV), and how to set up GA4, UTM tracking, and a simple monthly report.</description>
+    </item>
+  </channel>
+</rss>

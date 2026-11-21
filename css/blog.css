@@ -1,0 +1,136 @@
+/* Novifaro blog: shared styles for blog.html and blog/*.html */
+:root {
+  --bg: #F7E491;
+  --fg: #A82F18;
+  --accent: #CE4127;
+  --ink: #3b130b;
+  --card: #FBEFB6;
+  --line: rgba(168, 47, 24, .28);
+  --max: 760px;
+  --gutter: clamp(16px, 5vw, 64px);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--fg); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--fg); color: #fff; padding: .5rem .9rem; z-index: 99; }
+.skip:focus { left: 8px; }
+
+/* header */
+.site-header {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  padding: 18px var(--gutter);
+  border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; background: var(--bg); z-index: 20;
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--accent);
+  font-family: "Bebas Neue", Impact, sans-serif; font-size: 1.7rem; letter-spacing: .04em; }
+.brand img { border-radius: 50%; display: block; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px 12px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px; border: 1.5px solid var(--accent); border-radius: 999px;
+  color: var(--accent); background: #FBEFB6; text-decoration: none;
+  font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  transition: background .2s, color .2s, transform .2s;
+}
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.pill:hover, .pill.is-active { background: #fff; color: var(--accent); transform: translateY(-1px); }
+
+/* layout */
+main { padding: clamp(28px, 5vw, 64px) var(--gutter) 24px; }
+.post, .blog-hero, .cards, .cta { max-width: var(--max); margin-left: auto; margin-right: auto; }
+.cards { max-width: 1100px; }
+.blog-hero { max-width: 1100px; }
+
+.tag { display: inline-block; margin: 0 0 12px; font-size: .75rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+h1, h2, h3 { font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; color: var(--fg); letter-spacing: .01em; }
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1; margin: 0 0 18px; text-transform: uppercase; }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.05; margin: 0 0 14px; text-transform: uppercase; }
+h3 { font-size: 1.35rem; line-height: 1.2; margin: 0; }
+.lede { font-size: 1.2rem; line-height: 1.6; }
+.meta { font-size: .88rem; opacity: .85; margin: 0 0 24px; }
+.crumbs { font-size: .85rem; margin-bottom: 22px; opacity: .9; }
+.crumbs a { text-decoration: none; }
+
+.tldr {
+  background: var(--card); border: 2px solid var(--accent); border-left-width: 8px;
+  padding: 18px 22px; margin: 0 0 26px; border-radius: 4px;
+}
+.tldr h2 { font-size: 1.4rem; margin-bottom: 8px; }
+.tldr p { margin: 0; }
+
+.toc { border: 1px solid var(--line); padding: 16px 22px; margin: 28px 0 36px; border-radius: 4px; }
+.toc h2 { font-size: 1.2rem; }
+.toc ol { margin: 0; padding-left: 1.2rem; }
+.toc li { margin: 2px 0; }
+
+.sec { margin: 0 0 40px; scroll-margin-top: 90px; }
+.sec p, .sec ul, .sec ol { margin: 0 0 16px; }
+.sec ul, .sec ol { padding-left: 1.3rem; }
+.sec li { margin-bottom: 8px; }
+code { background: rgba(168, 47, 24, .12); padding: 1px 6px; border-radius: 3px; font-size: .92em; }
+
+.table-wrap { overflow-x: auto; margin: 0 0 18px; border: 1px solid var(--line); border-radius: 4px; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .95rem; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { background: rgba(206, 65, 39, .12); color: var(--fg); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+tr:last-child td { border-bottom: 0; }
+
+.qa { border-top: 1px solid var(--line); padding: 12px 0; }
+.qa:last-child { border-bottom: 1px solid var(--line); }
+.qa summary { cursor: pointer; list-style: none; }
+.qa summary::-webkit-details-marker { display: none; }
+.qa summary h3 { display: inline; }
+.qa p { margin: 8px 0 0; }
+
+.cta {
+  background: var(--accent); color: #fff; padding: clamp(22px, 4vw, 40px); margin-top: 48px; border-radius: 4px;
+}
+.cta h2 { color: #fff; }
+.cta p { margin: 0 0 18px; }
+.btn {
+  display: inline-block; border: 2px solid #fff; color: #fff; text-decoration: none;
+  padding: 11px 20px; font-weight: 700; letter-spacing: .06em; font-size: .85rem;
+  transition: background .2s, color .2s;
+}
+.btn:hover { background: #fff; color: var(--accent); }
+
+.related { margin-top: 48px; }
+.related ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.related a { display: block; padding: 14px 18px; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; background: var(--card); }
+.related a:hover { border-color: var(--accent); }
+.related .tag { display: block; margin-bottom: 2px; }
+
+/* blog index */
+.blog-hero { padding-bottom: 28px; }
+.cards { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 20px; }
+.card a {
+  display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 22px;
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 4px; text-decoration: none; color: var(--ink);
+  transition: transform .2s, border-color .2s;
+}
+.card a:hover { transform: translateY(-3px); border-color: var(--accent); }
+.card h2 { font-size: 1.6rem; margin: 0; }
+.card p { margin: 0; font-size: .96rem; }
+.card .more { margin-top: auto; padding-top: 10px; font-size: .82rem; font-weight: 600; color: var(--accent); }
+
+.site-footer { border-top: 1px solid var(--line); padding: 28px var(--gutter) 40px; font-size: .9rem; text-align: center; margin-top: 40px; }
+.site-footer p { margin: 4px 0; }
+
+@media (max-width: 560px) {
+  body { font-size: 1rem; }
+  .brand span { font-size: 1.4rem; }
+  .pill { padding: 6px 11px; font-size: .72rem; }
+}
+:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
