@@ -116,6 +116,11 @@
       <img src="Assets/brand/novifaro-circle.png" alt="" width="40" height="40" />
       <span>NOVIFARO</span>
     </a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+      <span class="nav-toggle__bar" aria-hidden="true"></span>
+    </button>
     <div class="nav-wrap">
       <nav class="pills" id="primary-nav" aria-label="Primary">
         <a class="pill" href="work.html"><i class="dot" aria-hidden="true"></i> Website</a>
@@ -172,5 +177,23 @@
     <p><a href="contact.html">Start a project</a> · <a href="mailto:hello@isexperience.house">hello@isexperience.house</a> · <a href="tel:+16139226604">+1 613 922 6604</a></p>
     <p>© 2026 Novifaro · Toronto, Ontario, Canada</p>
   </footer>
+  <script>
+  (function () {
+    var header = document.querySelector('.site-header');
+    var toggle = header && header.querySelector('.nav-toggle');
+    if (!toggle) return;
+    var mql = window.matchMedia('(max-width: 600px)');
+    function setOpen(open) {
+      header.classList.toggle('is-nav-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+    toggle.addEventListener('click', function (e) { e.stopPropagation(); setOpen(!header.classList.contains('is-nav-open')); });
+    header.querySelectorAll('.pill').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+    document.addEventListener('click', function (e) { if (!header.contains(e.target)) setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+    mql.addEventListener('change', function () { setOpen(false); });
+  })();
+  </script>
 </body>
 </html>
