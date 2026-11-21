@@ -462,6 +462,16 @@
       transition: opacity .3s ease, transform .3s ease;
     }
     .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* mobile: extra breathing room at the bottom */
+    @media (max-width: 470px) {
+      .bottom-left {
+        bottom: calc(clamp(14px, 2.2vh, 28px) + 32px + env(safe-area-inset-bottom, 0px));
+      }
+      .center {
+        padding-bottom: calc(40vh + 32px + env(safe-area-inset-bottom, 0px));
+      }
+    }
   </style>
   <link rel="stylesheet" href="css/mobile-nav.css">
   <link rel="stylesheet" href="css/a11y.css">
