@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://novifaro.ca/blog.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -69,6 +69,24 @@
   <url>
     <loc>https://novifaro.ca/blog/measure-digital-marketing-roi.html</loc>
     <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://novifaro.ca/blog/local-seo-google-maps-more-customers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://novifaro.ca/blog/ai-sales-assistant-website-visitors-to-customers.html</loc>
+    <lastmod>2026-11-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://novifaro.ca/blog/paid-ads-retargeting-get-customers-faster.html</loc>
+    <lastmod>2026-11-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

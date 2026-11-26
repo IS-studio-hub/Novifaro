@@ -3,10 +3,10 @@
 Run from the project root:  python3 scripts/build_blog.py
 """
 import html, json, os, re, sys
-from datetime import date
+from datetime import date, datetime
 
 sys.path.insert(0, os.path.dirname(__file__))
-from blog_content import POSTS, DATE
+from blog_content import POSTS, DATE as DEFAULT_DATE
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://novifaro.ca"
@@ -139,6 +139,7 @@ def page_shell(*, prefix, title, desc, canonical, og_type, jsonld, body, keyword
 """
 
 def build_post(p, by_slug):
+    DATE = p.get("date", DEFAULT_DATE)
     url = f"{SITE}/blog/{p['slug']}.html"
     mins = read_minutes(p)
     wc = len(post_text(p).split())
@@ -223,7 +224,7 @@ def build_index(posts):
           <span class="tag">{esc(p['category'])}</span>
           <h2>{esc(p['title'])}</h2>
           <p>{esc(p['desc'])}</p>
-          <span class="more">{read_minutes(p)} min read · {human_date(DATE)} →</span></a></li>
+          <span class="more">{read_minutes(p)} min read · {human_date(p.get('date', DEFAULT_DATE))} →</span></a></li>
 """
     body = f"""  <main id="main">
     <section class="blog-hero">
@@ -248,7 +249,7 @@ def build_index(posts):
           "description": "Digital marketing, SEO, web design, and AI systems insights for growing businesses from Novifaro in Toronto.",
           "inLanguage": "en-CA",
           "publisher": {"@type": "Organization", "name": "Novifaro", "url": SITE + "/", "logo": {"@type": "ImageObject", "url": LOGO}},
-          "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html", "datePublished": DATE} for p in posts],
+          "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{SITE}/blog/{p['slug']}.html", "datePublished": p.get("date", DEFAULT_DATE)} for p in posts],
         },
         {
           "@type": "BreadcrumbList",
@@ -272,7 +273,7 @@ def build_feed(posts):
       <title>{html.escape(p['title'])}</title>
       <link>{u}</link>
       <guid>{u}</guid>
-      <pubDate>Fri, 20 Nov 2026 09:00:00 GMT</pubDate>
+      <pubDate>{datetime.fromisoformat(p.get('date', DEFAULT_DATE)).strftime('%a, %d %b %Y')} 09:00:00 GMT</pubDate>
       <category>{html.escape(p['category'])}</category>
       <description>{html.escape(p['desc'])}</description>
     </item>
@@ -289,17 +290,18 @@ def build_feed(posts):
 """
 
 def main():
-    by_slug = {p["slug"]: p for p in POSTS}
+    posts = sorted(POSTS, key=lambda p: p.get("date", DEFAULT_DATE), reverse=True)
+    by_slug = {p["slug"]: p for p in posts}
     os.makedirs(os.path.join(ROOT, "blog"), exist_ok=True)
-    for p in POSTS:
+    for p in posts:
         for r in p["related"]:
             assert r in by_slug, r
         with open(os.path.join(ROOT, "blog", p["slug"] + ".html"), "w") as f:
             f.write(build_post(p, by_slug))
     with open(os.path.join(ROOT, "blog.html"), "w") as f:
-        f.write(build_index(POSTS))
+        f.write(build_index(posts))
     with open(os.path.join(ROOT, "blog", "feed.xml"), "w") as f:
-        f.write(build_feed(POSTS))
+        f.write(build_feed(posts))
     print("built", len(POSTS), "posts")
 
 if __name__ == "__main__":
